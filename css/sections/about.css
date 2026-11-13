@@ -1,0 +1,181 @@
+/* Sobre mim: superfície de papel e trajetória conectada. */
+
+.about {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  position: relative;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13%;
+}
+.about-heading {
+  position: relative;
+  isolation: isolate;
+}
+.about-heading::before,
+.about-heading::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid #87333b;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.about-heading::before {
+  width: 108px;
+  height: 108px;
+  top: 28px;
+  right: 16px;
+  opacity: 0.18;
+}
+.about-heading::after {
+  width: 66px;
+  height: 66px;
+  top: 49px;
+  right: 37px;
+  opacity: 0.25;
+}
+.about h2 {
+  font-size: clamp(65px, 6.3vw, 91px);
+}
+.about h2 em {
+  color: #87333b;
+}
+/* Os marcos são links reais para formação e experiência, não legendas decorativas. */
+.about-journey {
+  position: relative;
+  display: grid;
+  gap: 13px;
+  list-style: none;
+  margin-top: 36px;
+}
+.about-journey::before {
+  content: "";
+  position: absolute;
+  top: 27px;
+  bottom: 27px;
+  left: 19px;
+  width: 1px;
+  background: #87333b45;
+}
+.about-journey a {
+  position: relative;
+  display: grid;
+  grid-template-columns: 39px minmax(0, 1fr);
+  column-gap: 15px;
+  align-items: center;
+  padding-block: 7px;
+}
+.journey-mark {
+  display: grid;
+  place-items: center;
+  grid-row: span 2;
+  width: 39px;
+  height: 39px;
+  color: #87333b;
+  border: 1px solid #87333b73;
+  background: var(--color-paper);
+  transition:
+    color var(--transition),
+    background var(--transition),
+    border-color var(--transition);
+}
+.journey-mark svg {
+  width: 19px;
+  height: 19px;
+}
+.journey-name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.journey-detail {
+  margin-top: 3px;
+  color: #67564c;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.about-journey a:is(:hover, :focus-visible) .journey-mark {
+  color: var(--color-paper);
+  background: #87333b;
+  border-color: #87333b;
+}
+.about-journey a:focus-visible {
+  outline-color: #87333b;
+}
+.about-copy {
+  padding-top: 2px;
+}
+.about-copy > p {
+  color: #554b3e;
+  font-size: 14px;
+  margin-top: 19px;
+  line-height: 1.9;
+}
+.about-copy > .lead {
+  margin-top: 0;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #30271f;
+  letter-spacing: -0.025em;
+}
+.lead strong {
+  color: #87333b;
+  font-weight: 600;
+}
+
+@media (max-width: 620px) {
+  .about-heading::before {
+    width: 88px;
+    height: 88px;
+    right: 22px;
+    top: 26px;
+  }
+  .about-heading::after {
+    width: 52px;
+    height: 52px;
+    right: 40px;
+    top: 44px;
+  }
+  .about-journey {
+    margin-top: 28px;
+    gap: 9px;
+  }
+  .about-journey a {
+    column-gap: 13px;
+  }
+}
+
+/* Responsividade do próprio módulo, do maior para o menor breakpoint. */
+@media (max-width: 1100px) {
+  .about-grid {
+    gap: 9%;
+  }
+}
+
+@media (max-width: 850px) {
+  .about h2 {
+    font-size: 66px;
+  }
+  .about-grid {
+    gap: 8%;
+  }
+  .about-copy > .lead {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .about h2 {
+    font-size: clamp(64px, 17vw, 82px);
+  }
+  .about-copy > .lead {
+    font-size: 20px;
+  }
+}

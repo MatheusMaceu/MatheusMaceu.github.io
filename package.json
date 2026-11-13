@@ -1,0 +1,14 @@
+{
+  "name": "pp2-dark-carnival-editorial",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PP2 — Matheus Maceu · Dark Carnival Editorial",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

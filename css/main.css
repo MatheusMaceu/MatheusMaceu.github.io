@@ -1,0 +1,24 @@
+/* Entrada única do CSS. A ordem preserva a cascata: fundamentos, componentes,
+   seções e, por último, movimento com respeito a prefers-reduced-motion. */
+
+/* Fundamentos e estilos compartilhados. */
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
+
+/* Componentes reutilizados na página. */
+@import url("./components/actions.css");
+@import url("./components/navbar.css");
+@import url("./components/footer.css");
+@import url("./components/project-preview.css");
+
+/* Cada seção inclui seus ajustes de responsividade. */
+@import url("./sections/hero.css");
+@import url("./sections/about.css");
+@import url("./sections/projects.css");
+@import url("./sections/skills.css");
+@import url("./sections/experience.css");
+@import url("./sections/education.css");
+@import url("./sections/contact.css");
+
+@import url("./base/animations.css");

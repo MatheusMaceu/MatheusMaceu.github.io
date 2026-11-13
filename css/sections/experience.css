@@ -1,0 +1,96 @@
+/* Experiência profissional apresentada na moldura de ingresso. */
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12%;
+  align-items: center;
+}
+.experience-ticket {
+  position: relative;
+  padding: 32px;
+  border: 1px solid #735843;
+  background: #211a15;
+}
+.experience-ticket::before,
+.experience-ticket::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 52%;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 1px solid #735843;
+}
+.experience-ticket::before {
+  left: -11px;
+  clip-path: inset(0 0 0 50%);
+}
+.experience-ticket::after {
+  right: -11px;
+  clip-path: inset(0 50% 0 0);
+}
+.experience-ticket h3 {
+  font-size: 63px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.ticket-role {
+  margin-top: 13px;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ticket-period {
+  display: block;
+  margin-top: 10px;
+  color: #c1af9b;
+  font-size: 12px;
+}
+.ticket-rule {
+  height: 1px;
+  background: #4d3b2c;
+  margin-block: 23px;
+}
+.ticket-description {
+  color: #c1af9b;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* Responsividade do próprio módulo, do maior para o menor breakpoint. */
+@media (max-width: 1100px) {
+  .experience-layout {
+    gap: 9%;
+  }
+  .experience-ticket {
+    padding-inline: 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  .experience-layout {
+    gap: 8%;
+  }
+  .experience-ticket {
+    padding: 25px 22px;
+  }
+  .experience-ticket h3 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 620px) {
+  .experience-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .experience-ticket {
+    padding: 26px 25px;
+  }
+  .experience-ticket h3 {
+    font-size: 62px;
+  }
+}

@@ -1,0 +1,97 @@
+/* Fontes locais, hierarquia tipográfica e cabeçalhos compartilhados. */
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../../assets/fonts/barlow-condensed-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../../assets/fonts/barlow-condensed-extrabold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../../assets/fonts/cormorant-garamond-italic.woff2") format("woff2");
+  font-weight: 500 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../../assets/fonts/manrope-latin.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.85;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+h2 {
+  font-size: clamp(54px, 5.5vw, 80px);
+  letter-spacing: -0.015em;
+  line-height: 0.94;
+}
+h2 em {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.98em;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  text-transform: none;
+  color: var(--color-accent-light);
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 45px;
+  margin-bottom: 65px;
+}
+.section-heading > p {
+  max-width: 270px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--color-muted);
+}
+
+/* Responsividade do próprio módulo, do maior para o menor breakpoint. */
+@media (max-width: 850px) {
+  h2 {
+    font-size: 58px;
+  }
+  .section-heading > p {
+    max-width: 225px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 620px) {
+  h2 {
+    font-size: clamp(50px, 12.6vw, 66px);
+  }
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 23px;
+    margin-bottom: 39px;
+  }
+  .section-heading > p {
+    font-size: 14px;
+    max-width: 320px;
+  }
+}

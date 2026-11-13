@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121110" />
+    <link
+      rel="canonical"
+      href="https://matheusmaceu.github.io/projetos/intea.html"
+    />
+    <meta
+      name="description"
+      content="Estudo de caso do INTEA: pesquisa, decisões e desenvolvimento de uma rede social para a comunidade autista. Projeto em equipe de Matheus Maceu na ETEC de Guaianazes."
+      data-i18n-content="intea.metaDescription"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://matheusmaceu.github.io/projetos/intea.html"
+    />
+    <meta
+      property="og:locale"
+      content="pt_BR"
+      data-i18n-content="intea.metaLocale"
+    />
+    <meta
+      property="og:title"
+      content="INTEA — Estudo de caso · Matheus Maceu"
+      data-i18n-content="intea.metaTitle"
+    />
+    <meta
+      property="og:description"
+      content="Da pesquisa com a comunidade às telas e à modelagem de uma rede social inclusiva: conheça o INTEA."
+      data-i18n-content="intea.metaSocialDescription"
+    />
+    <meta
+      property="og:image"
+      content="https://matheusmaceu.github.io/assets/images/projects/intea/landing.jpg"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="622" />
+    <meta
+      property="og:image:alt"
+      content="Tela de apresentação do INTEA registrada no TCC de 2025."
+      data-i18n-content="intea.metaImageAlt"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title data-i18n="intea.metaTitle">
+      INTEA — Estudo de caso · Matheus Maceu
+    </title>
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="../assets/fonts/barlow-condensed-extrabold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../assets/fonts/manrope-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- O estudo compartilha os fundamentos do site; este módulo cuida da leitura editorial. -->
+    <link rel="stylesheet" href="../css/pages/case-study.css" />
+    <script type="module" src="../js/main.js"></script>
+  </head>
+  <body class="case-page" data-page="intea">
+    <a class="skip-link" href="#conteudo" data-i18n="common.skipLink"
+      >Pular para o conteúdo</a
+    >
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="wordmark"
+          href="../index.html#inicio"
+          aria-label="K112p1 — voltar ao portfólio"
+          data-i18n-aria-label="common.wordmarkBack"
+          ><span class="wordmark-symbol" aria-hidden="true">◆</span>K112p1<span
+            class="wordmark-dot"
+            >.</span
+          ></a
+        >
+
+        <nav
+          class="main-nav"
+          id="main-nav"
+          aria-label="Navegação do estudo de caso"
+          data-i18n-aria-label="common.caseNavLabel"
+        >
+          <a href="#contexto" data-i18n="common.navContext">Contexto</a>
+          <a href="#processo" data-i18n="common.navProcess">Processo</a>
+          <a href="#produto" data-i18n="common.navProduct">Produto</a>
+          <a href="#tecnologia" data-i18n="common.navTechnology">Tecnologia</a>
+          <a href="#aprendizados" data-i18n="common.navLessons">Aprendizados</a>
+          <a class="nav-contact" href="../index.html#contato"
+            ><span data-i18n="common.navContact">Vamos conversar</span>
+            <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+        <div class="header-actions">
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="Mudar idioma para inglês"
+            title="Mudar idioma para inglês"
+            hidden
+          >
+            EN
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="main-nav"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+        <span
+          class="sr-only"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          data-language-status
+        ></span>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <header class="case-hero container" id="inicio">
+        <a class="case-back" href="../index.html#projetos"
+          ><span aria-hidden="true">←</span>
+          <span data-i18n="common.backProjects">Voltar aos projetos</span></a
+        >
+        <p class="case-eyebrow" data-i18n="intea.eyebrow">
+          Estudo de caso · ETEC de Guaianazes · 2025
+        </p>
+        <h1 class="case-title">
+          INTEA<span data-i18n="intea.heroSubtitle"
+            >Um espaço para encontrar comunidade.</span
+          >
+        </h1>
+        <p class="case-intro" data-i18n="intea.intro">
+          Uma rede social pensada para aproximar pessoas autistas, responsáveis
+          e outras pessoas da comunidade. Um projeto em equipe que começou pela
+          escuta e ganhou forma em pesquisa, modelagem e desenvolvimento web.
+        </p>
+        <dl class="case-facts">
+          <div>
+            <dt data-i18n="intea.factContextLabel">Contexto</dt>
+            <dd data-i18n="intea.factContext">
+              Trabalho de Conclusão de Curso
+            </dd>
+          </div>
+          <div>
+            <dt data-i18n="intea.factRoleLabel">Minha participação</dt>
+            <dd data-i18n="intea.factRole">
+              Interfaces e integração com Laravel
+            </dd>
+          </div>
+          <div>
+            <dt data-i18n="intea.factTeamLabel">Construção</dt>
+            <dd data-i18n="intea.factTeam">Projeto em equipe · Espectrum</dd>
+          </div>
+        </dl>
+        <figure class="case-cover">
+          <img
+            src="../assets/images/projects/intea/landing.jpg"
+            width="1280"
+            height="622"
+            fetchpriority="high"
+            alt="Tela inicial do INTEA, com apresentação da comunidade e acesso à plataforma."
+            data-i18n-alt="intea.coverAlt"
+          />
+          <figcaption data-i18n="intea.coverCaption">
+            A apresentação do INTEA, em uma das telas registradas no TCC de
+            2025.
+          </figcaption>
+        </figure>
+      </header>
+
+      <section
+        class="case-section container"
+        id="contexto"
+        aria-labelledby="contexto-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="contexto-title">
+            <span data-i18n="intea.contextTitle">Conectar pessoas.</span
+            ><br /><em data-i18n="intea.contextTitleEmphasis"
+              >Começar pela escuta.</em
+            >
+          </h2>
+        </div>
+        <div class="case-columns reveal">
+          <p class="case-lead" data-i18n="intea.contextLead">
+            Como um sistema web pode apoiar a socialização e a troca de
+            experiências na comunidade autista?
+          </p>
+          <div>
+            <p data-i18n="intea.contextOrigin">
+              Essa pergunta orientou o INTEA, desenvolvido na ETEC de Guaianazes
+              como TCC do curso técnico em Desenvolvimento de Sistemas. A equipe
+              Espectrum partiu da vontade de criar um espaço de convivência para
+              pessoas autistas, responsáveis e quem busca participar dessa
+              comunidade.
+            </p>
+            <p data-i18n="intea.contextChallenge">
+              O desafio envolvia pensar em diferentes formas de participação,
+              organizar as conversas e prever ferramentas para acompanhar e
+              moderar o conteúdo compartilhado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-section container"
+        id="processo"
+        aria-labelledby="processo-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="processo-title">
+            <span data-i18n="intea.processTitle">Da pesquisa</span><br /><em
+              data-i18n="intea.processTitleEmphasis"
+              >às decisões de produto.</em
+            >
+          </h2>
+        </div>
+        <ol class="case-process">
+          <li class="reveal">
+            <h3 data-i18n="intea.processResearchTitle">Entender o contexto</h3>
+            <p data-i18n="intea.processResearch">
+              A equipe reuniu pesquisa bibliográfica, um questionário
+              exploratório com 35 respostas e entrevistas com familiares,
+              pessoas autistas e uma psicóloga. Essa escuta orientou a discussão
+              sobre comunicação, apoio e espaços de convivência.
+            </p>
+          </li>
+          <li class="reveal">
+            <h3 data-i18n="intea.processParticipationTitle">
+              Organizar a participação
+            </h3>
+            <p data-i18n="intea.processParticipation">
+              Os papéis de pessoa autista, responsável, comunidade e
+              administração ajudaram a definir os percursos. Casos de uso,
+              classes e o modelo de dados foram usados para relacionar pessoas,
+              ações e permissões.
+            </p>
+          </li>
+          <li class="reveal">
+            <h3 data-i18n="intea.processAccessTitle">Escolher o acesso</h3>
+            <p data-i18n="intea.processAccess">
+              O trabalho considerou diferentes formas de acesso e optou por um
+              site responsivo. A escolha levou a proposta para o navegador,
+              considerando o uso em computadores e dispositivos móveis.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section
+        class="case-section container"
+        id="produto"
+        aria-labelledby="produto-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="produto-title">
+            <span data-i18n="intea.productTitle">A comunidade</span><br /><em
+              data-i18n="intea.productTitleEmphasis"
+              >ganhando interface.</em
+            >
+          </h2>
+          <p data-i18n="intea.productDescription">
+            Registros das telas apresentados pela equipe no TCC.
+          </p>
+        </div>
+        <div class="case-principles">
+          <article class="reveal">
+            <h3 data-i18n="intea.productParticipationTitle">Participar</h3>
+            <p data-i18n="intea.productParticipation">
+              Perfis e publicações dão espaço à expressão individual. O feed
+              reúne as conversas, com recursos de curtidas e respostas.
+            </p>
+          </article>
+          <article class="reveal">
+            <h3 data-i18n="intea.productInterestsTitle">
+              Encontrar interesses
+            </h3>
+            <p data-i18n="intea.productInterests">
+              Grupos e espaços de comunidade organizam encontros em torno de
+              assuntos compartilhados. As mensagens complementam a interação
+              entre pessoas.
+            </p>
+          </article>
+          <article class="reveal">
+            <h3 data-i18n="intea.productModerationTitle">
+              Cuidar da convivência
+            </h3>
+            <p data-i18n="intea.productModeration">
+              Denúncias e recursos de moderação fazem parte do projeto,
+              conectando a experiência de uso ao acompanhamento administrativo.
+            </p>
+          </article>
+        </div>
+        <div class="case-gallery">
+          <figure class="case-screen case-screen--wide reveal">
+            <img
+              src="../assets/images/projects/intea/feed.jpg"
+              width="1280"
+              height="620"
+              loading="lazy"
+              alt="Feed do INTEA com publicações, área de postagem, tendências e navegação para mensagens, perfil e grupos."
+              data-i18n-alt="intea.feedAlt"
+            />
+            <figcaption data-i18n="intea.feedCaption">
+              Feed de publicações: os conteúdos e as interações reunidos na
+              navegação principal.
+            </figcaption>
+          </figure>
+          <figure class="case-screen reveal">
+            <img
+              src="../assets/images/projects/intea/tipos-conta.jpg"
+              width="1280"
+              height="613"
+              loading="lazy"
+              alt="Cadastro do INTEA com opções de conta para pessoa autista, comunidade e responsável."
+              data-i18n-alt="intea.accountAlt"
+            />
+            <figcaption data-i18n="intea.accountCaption">
+              O início do cadastro apresenta os diferentes tipos de
+              participação.
+            </figcaption>
+          </figure>
+          <figure class="case-screen reveal">
+            <img
+              src="../assets/images/projects/intea/criacao-grupo.jpg"
+              width="1280"
+              height="615"
+              loading="lazy"
+              alt="Formulário para criar um grupo no INTEA, com nome, descrição e imagem."
+              data-i18n-alt="intea.groupAlt"
+            />
+            <figcaption data-i18n="intea.groupCaption">
+              A criação de grupos organiza a convivência em espaços de
+              interesse.
+            </figcaption>
+          </figure>
+          <figure class="case-screen case-screen--wide reveal">
+            <img
+              src="../assets/images/projects/intea/acessibilidade.jpg"
+              width="1280"
+              height="621"
+              loading="lazy"
+              alt="Configurações do INTEA com opção de modo monocromático e formulário de alteração de senha com campos vazios."
+              data-i18n-alt="intea.settingsAlt"
+            />
+            <figcaption data-i18n="intea.settingsCaption">
+              A tela de configurações registrada inclui uma preferência de
+              apresentação em modo monocromático.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section
+        class="case-section container"
+        id="tecnologia"
+        aria-labelledby="tecnologia-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="tecnologia-title">
+            <span data-i18n="intea.technologyTitle">Dar estrutura</span
+            ><br /><em data-i18n="intea.technologyTitleEmphasis"
+              >às relações.</em
+            >
+          </h2>
+        </div>
+        <div class="case-columns reveal">
+          <div>
+            <p data-i18n="intea.technologyRole">
+              Minha atuação reuniu interfaces em Blade, CSS e JavaScript e
+              integrações com Laravel. Trabalhei nas configurações, nas
+              preferências de apresentação e na responsividade, além de
+              correções pontuais nos fluxos de cadastro.
+            </p>
+            <p data-i18n="intea.technologyFoundation">
+              A base técnica conecta rotas, controladores e modelos aos
+              templates Blade. O projeto também utiliza JavaScript, HTML, CSS e
+              MySQL, além de uma integração com Pusher para comunicação.
+            </p>
+          </div>
+          <div>
+            <p data-i18n="intea.technologyData">
+              O modelo de dados torna visíveis as relações entre usuários,
+              postagens, comentários, interesses, mensagens e denúncias. Essa
+              organização ajuda a entender como as diferentes partes da rede
+              social se conectam.
+            </p>
+            <div class="case-stack">
+              <ul
+                class="tech-tags"
+                aria-label="Tecnologias do projeto INTEA"
+                data-i18n-aria-label="intea.technologyLabel"
+              >
+                <li>PHP</li>
+                <li>Laravel</li>
+                <li>Blade</li>
+                <li>JavaScript</li>
+                <li data-i18n="intea.technologyHtmlCss">HTML e CSS</li>
+                <li>MySQL</li>
+                <li>Pusher</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="case-contribution-block reveal">
+          <h3
+            class="case-contribution-title"
+            data-i18n="intea.contributionsTitle"
+          >
+            Algumas das minhas contribuições
+          </h3>
+          <p data-i18n="intea.contributionsIntro">
+            Os exemplos abaixo mostram parte das minhas contribuições. Também
+            atuei como revisor do código dos colegas da equipe durante o
+            desenvolvimento.
+          </p>
+          <ul class="case-contributions">
+            <li>
+              <h4 data-i18n="intea.contributionSettingsTitle">
+                Configurações e preferências
+              </h4>
+              <div>
+                <p data-i18n="intea.contributionSettings">
+                  Estruturei a página de configurações e contribuí para a
+                  implementação inicial da preferência visual monocromática. A
+                  persistência conectou a interface Blade e o JavaScript a
+                  campos no modelo de usuário, na migração e a uma rota
+                  autenticada do Laravel. O recurso recebeu evoluções
+                  posteriores da equipe.
+                </p>
+                <div class="case-evidence-links">
+                  <a
+                    class="text-link"
+                    href="https://github.com/EspectrumOrg/intea-site/commit/5bf81c2cf80c52ac74c58b02cf0d0c237be06cbb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="intea.evidenceSettings"
+                      >Página de configurações</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span class="sr-only" data-i18n="intea.commitSettings">
+                      — commit 5bf81c2 (abre em nova aba)</span
+                    ></a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://github.com/EspectrumOrg/intea-site/commit/9f1b31828c6f763c18f4f433fefcb2f7df12874e"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="intea.evidencePreference"
+                      >Persistência da preferência</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span class="sr-only" data-i18n="intea.commitPreference">
+                      — commit 9f1b318 (abre em nova aba)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4 data-i18n="intea.contributionProfileTitle">
+                Perfil responsivo
+              </h4>
+              <div>
+                <p data-i18n="intea.contributionProfile">
+                  Ajustei o CSS do perfil para telas menores, reorganizando
+                  colunas, ações, abas, publicações e modais. Os breakpoints de
+                  768 e 480 pixels passaram a tratar a disposição desses
+                  elementos conforme a largura disponível.
+                </p>
+                <div class="case-evidence-links">
+                  <a
+                    class="text-link"
+                    href="https://github.com/EspectrumOrg/intea-site/commit/5ba7bfdc36a7b7f7e73c519dac86099656d2bfe4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="intea.evidenceProfile"
+                      >Ajustes de responsividade</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span class="sr-only" data-i18n="intea.commitProfile">
+                      — commit 5ba7bfd (abre em nova aba)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4 data-i18n="intea.contributionNavigationTitle">
+                Apresentação e navegação
+              </h4>
+              <div>
+                <p data-i18n="intea.contributionNavigation">
+                  Refinei o layout e a responsividade da landing page e
+                  acrescentei o botão e o comportamento de abertura e fechamento
+                  do menu mobile. Essa contribuição combina mudanças de CSS e
+                  JavaScript na apresentação do projeto.
+                </p>
+                <div class="case-evidence-links">
+                  <a
+                    class="text-link"
+                    href="https://github.com/EspectrumOrg/intea-site/commit/75fb1431e056c0f754e490cd2c0ceaba52aa02ec"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="intea.evidenceNavigation"
+                      >Landing page e menu mobile</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span class="sr-only" data-i18n="intea.commitNavigation">
+                      — commit 75fb143 (abre em nova aba)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4 data-i18n="intea.contributionRegistrationTitle">
+                Fluxo de cadastro
+              </h4>
+              <div>
+                <p data-i18n="intea.contributionRegistration">
+                  Corrigi o retorno do cadastro da comunidade no controlador,
+                  colocando o redirecionamento para o login no caminho executado
+                  após o cadastro. Foi um ajuste pontual no fluxo da aplicação.
+                </p>
+                <div class="case-evidence-links">
+                  <a
+                    class="text-link"
+                    href="https://github.com/EspectrumOrg/intea-site/commit/d610b71c5180d6d084a9b57f7f0d7b12150ea6f3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="intea.evidenceRegistration"
+                      >Correção no controlador</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span class="sr-only" data-i18n="intea.commitRegistration">
+                      — commit d610b71 (abre em nova aba)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="case-gallery">
+          <figure class="case-screen case-screen--wide reveal">
+            <img
+              src="../assets/images/projects/intea/modelo-dados.jpg"
+              width="1057"
+              height="694"
+              loading="lazy"
+              alt="Modelo de dados do INTEA, com a tabela de usuários ligada a publicações, comentários, interesses, mensagens e recursos de moderação."
+              data-i18n-alt="intea.dataAlt"
+            />
+            <figcaption data-i18n="intea.dataCaption">
+              Modelo entidade-relacionamento apresentado no TCC: a estrutura de
+              dados por trás das interações.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="case-actions reveal">
+          <a
+            class="text-link"
+            href="https://github.com/EspectrumOrg/intea-site"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="common.viewImplementation"
+              >Ver implementação no GitHub</span
+            >
+            <span aria-hidden="true">↗</span
+            ><span class="sr-only"
+              ><span data-i18n="common.openNewTab"
+                >(abre em nova aba)</span
+              ></span
+            ></a
+          >
+        </div>
+      </section>
+
+      <section
+        class="case-section container"
+        id="aprendizados"
+        aria-labelledby="aprendizados-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="aprendizados-title">
+            <span data-i18n="intea.lessonsTitle">O que o projeto</span><br /><em
+              data-i18n="intea.lessonsTitleEmphasis"
+              >ajuda a enxergar.</em
+            >
+          </h2>
+        </div>
+        <div class="case-columns reveal">
+          <p class="case-lead" data-i18n="intea.lessonsLead">
+            As decisões sobre pessoas, dados e interface fazem parte da mesma
+            construção.
+          </p>
+          <div>
+            <p data-i18n="intea.lessonsConnections">
+              O INTEA reúne pesquisa, modelagem e desenvolvimento em um trabalho
+              de formação técnica. Os diferentes papéis influenciam o cadastro,
+              a proposta de comunidade aparece nos grupos, e a convivência pede
+              ferramentas de acompanhamento e moderação.
+            </p>
+            <p data-i18n="intea.lessonsNextSteps">
+              Os próximos passos para aprofundar o estudo são registrar testes
+              de usabilidade e acessibilidade com o público, documentar o estado
+              de cada funcionalidade e acompanhar novas decisões técnicas com
+              exemplos e testes.
+            </p>
+          </div>
+        </div>
+        <p class="case-note reveal">
+          <span data-i18n="intea.sourceIntro"
+            >Base deste estudo: TCC do INTEA, equipe Espectrum, ETEC de
+            Guaianazes, 2025, e</span
+          >
+          <a
+            href="https://github.com/EspectrumOrg/intea-site"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="intea.sourceRepository"
+              >repositório do projeto</span
+            ><span class="sr-only">
+              <span data-i18n="common.openNewTab"
+                >(abre em nova aba)</span
+              ></span
+            ></a
+          ><span data-i18n="intea.sourceImages"
+            >. As imagens são registros do documento acadêmico de 2025.</span
+          >
+        </p>
+      </section>
+
+      <section class="case-next container" aria-labelledby="next-title">
+        <h2 id="next-title">
+          <span data-i18n="intea.nextTitle">Quer continuar</span><br /><em
+            data-i18n="intea.nextTitleEmphasis"
+            >a conversa?</em
+          >
+        </h2>
+        <p data-i18n="intea.nextDescription">
+          Você pode explorar o código do INTEA, conhecer os outros projetos ou
+          falar comigo sobre o trabalho.
+        </p>
+        <div class="case-actions">
+          <a class="button button-primary" href="../index.html#contato"
+            ><span data-i18n="common.contact">Entre em contato</span>
+            <span aria-hidden="true">↗</span></a
+          ><a class="text-link" href="../index.html#projetos"
+            ><span data-i18n="common.backProjects">Voltar aos projetos</span>
+            <span aria-hidden="true">←</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Matheus Maceu</p>
+        <nav
+          class="footer-social"
+          aria-label="Redes sociais"
+          data-i18n-aria-label="common.socialLabel"
+        >
+          <a
+            href="https://github.com/MatheusMaceu"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub<span class="sr-only">
+              <span data-i18n="common.openNewTab"
+                >(abre em nova aba)</span
+              ></span
+            ></a
+          >
+          <a
+            href="https://www.linkedin.com/in/matheus-maceu-ferreira-da-silva-616235340/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn<span class="sr-only">
+              <span data-i18n="common.openNewTab"
+                >(abre em nova aba)</span
+              ></span
+            ></a
+          >
+        </nav>
+        <a class="back-top" href="#inicio"
+          ><span data-i18n="common.backTop">Voltar ao topo</span>
+          <span aria-hidden="true">↑</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+/* Formação em ordem cronológica e linha do tempo. */
+
+.education {
+  padding-top: 0;
+}
+.education-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12%;
+  align-items: start;
+}
+.education h2 {
+  font-size: clamp(54px, 5vw, 72px);
+}
+.education-timeline {
+  list-style: none;
+}
+.education-entry {
+  position: relative;
+  padding: 0 0 35px 26px;
+  border-left: 1px solid #644739;
+}
+.education-entry::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  background: var(--color-accent-light);
+  transform: rotate(45deg);
+}
+.education-entry:last-child {
+  padding-bottom: 0;
+}
+.education-entry h3 {
+  font-size: 33px;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.education-entry p {
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.85;
+  margin-top: 16px;
+}
+.education-entry .education-course {
+  color: #d6c6b2;
+  line-height: 1.7;
+}
+
+/* Responsividade do próprio módulo, do maior para o menor breakpoint. */
+@media (max-width: 1100px) {
+  .education-layout {
+    gap: 9%;
+  }
+}
+
+@media (max-width: 850px) {
+  .education-layout {
+    gap: 8%;
+  }
+  .education h2 {
+    font-size: 52px;
+  }
+  .education-entry h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 620px) {
+  .education-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .education h2 {
+    font-size: clamp(49px, 12.5vw, 65px);
+  }
+  .education-entry h3 {
+    font-size: 31px;
+  }
+}

@@ -1,0 +1,250 @@
+/* Projetos em composição alternada, com imagens e contexto de cada trabalho. */
+
+.projects .section-heading {
+  position: relative;
+  isolation: isolate;
+}
+.projects .section-heading::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 105px;
+  height: 105px;
+  left: 54%;
+  top: 19%;
+  border: 1px solid #b94a4e48;
+  box-shadow:
+    inset 0 0 0 12px var(--color-bg),
+    inset 0 0 0 13px #b94a4e2b;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.project {
+  border-top: 1px solid #74604f;
+}
+.project + .project {
+  margin-top: 65px;
+}
+.project-heading {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  padding-block: 26px;
+}
+.project-heading::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-accent-light);
+  background: var(--color-wine);
+  transform: rotate(45deg);
+}
+.project-heading > div {
+  flex: 1;
+  min-width: 0;
+}
+.project-heading h3 {
+  font-size: clamp(47px, 5vw, 70px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.project-heading h3 > span {
+  color: var(--color-accent-light);
+}
+.project-discipline {
+  max-width: 145px;
+  padding-left: 17px;
+  border-left: 1px solid #74604f;
+  color: #c7b6a2;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.project-body {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 6%;
+  align-items: center;
+}
+.project-copy {
+  padding-block: 15px;
+}
+.project-copy > p {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 1.85;
+}
+.project-copy > .project-lead {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+  font-style: italic;
+  margin-top: 0;
+}
+.project-features {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+  margin-top: 20px;
+}
+.project-features li {
+  font-size: 12px;
+  color: #c6baaa;
+}
+.project-features li::before {
+  content: "\2014";
+  margin-right: 9px;
+  color: var(--color-accent);
+}
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  margin-top: 24px;
+}
+.tech-tags > li {
+  border: 1px solid #594a3e;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #c7b6a2;
+}
+.project-copy .text-link {
+  width: 100%;
+  margin-top: 22px;
+}
+/* Alterna a composição no desktop e restaura a ordem de leitura no mobile. */
+.project-waste .project-body {
+  grid-template-columns: 1fr 1.4fr;
+}
+.project-waste .project-preview {
+  order: 2;
+}
+.project-waste .project-copy {
+  order: 1;
+}
+.projects-end {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 36px;
+}
+
+@media (max-width: 620px) {
+  .projects .section-heading::after {
+    width: 71px;
+    height: 71px;
+    top: 20px;
+    left: auto;
+    right: 10px;
+    opacity: 0.7;
+  }
+  .project-heading {
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 11px;
+  }
+  .project-heading::before {
+    width: 7px;
+    height: 7px;
+  }
+  .project-heading > div {
+    flex-basis: calc(100% - 19px);
+  }
+  .project-discipline {
+    max-width: none;
+    margin-left: 19px;
+    padding-left: 0;
+    border-left: 0;
+    color: var(--color-muted);
+  }
+}
+
+/* Responsividade do próprio módulo, do maior para o menor breakpoint. */
+@media (max-width: 1100px) {
+  .project-body {
+    gap: 5%;
+  }
+  .project-heading h3 {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 850px) {
+  .project-heading h3 {
+    font-size: 48px;
+  }
+  .project-body,
+  .project-waste .project-body {
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    align-items: start;
+  }
+  .project-copy {
+    padding-block: 0;
+  }
+  .project-copy > .project-lead {
+    font-size: 28px;
+  }
+  .project-copy > p {
+    font-size: 13px;
+  }
+  .tech-tags {
+    margin-top: 19px;
+  }
+  .project-copy .text-link {
+    margin-top: 17px;
+  }
+}
+
+@media (max-width: 620px) {
+  .project-heading {
+    padding-block: 22px;
+  }
+  .project-heading h3 {
+    font-size: 46px;
+  }
+  .project-body,
+  .project-waste .project-body {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .project-copy > .project-lead {
+    font-size: 33px;
+  }
+  .project-copy > p {
+    font-size: 14px;
+  }
+  .tech-tags {
+    margin-top: 21px;
+  }
+  .project-copy .text-link {
+    margin-top: 20px;
+  }
+  .project-waste .project-preview,
+  .project-waste .project-copy {
+    order: initial;
+  }
+  .project-waste .project-heading h3 {
+    font-size: 38px;
+  }
+  .project + .project {
+    margin-top: 45px;
+  }
+  .projects-end {
+    justify-content: flex-start;
+    margin-top: 34px;
+  }
+}
+
+@media (max-width: 359px) {
+  .project-waste .project-heading h3 {
+    font-size: 34px;
+  }
+}

@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121110" />
+    <link
+      rel="canonical"
+      href="https://matheusmaceu.github.io/projetos/smart-waste.html"
+    />
+    <meta
+      name="description"
+      content="Estudo de caso do Smart Waste: escopo, monitoramento de volume, dashboard e arquitetura de um projeto acadêmico de software e sensores na SPTech."
+      data-i18n-content="smartWaste.description"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://matheusmaceu.github.io/projetos/smart-waste.html"
+    />
+    <meta
+      property="og:locale"
+      content="pt_BR"
+      data-i18n-content="smartWaste.metaLocale"
+    />
+    <meta
+      property="og:title"
+      content="Smart Waste — Estudo de caso · Matheus Maceu"
+      data-i18n-content="smartWaste.metaTitle"
+    />
+    <meta
+      property="og:description"
+      content="Como a proposta de acompanhar recipientes hospitalares foi organizada em dados, gráficos e alertas. Um projeto em equipe na SPTech."
+      data-i18n-content="smartWaste.metaSummary"
+    />
+    <meta
+      property="og:image"
+      content="https://matheusmaceu.github.io/assets/images/projects/smart-waste-dashboard.png"
+    />
+    <meta property="og:image:width" content="1897" />
+    <meta property="og:image:height" content="906" />
+    <meta
+      property="og:image:alt"
+      content="Dashboard do Smart Waste com indicadores, gráfico e acompanhamento de recipientes."
+      data-i18n-content="smartWaste.metaImageAlt"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title data-i18n="smartWaste.metaTitle">
+      Smart Waste — Estudo de caso · Matheus Maceu
+    </title>
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="../assets/fonts/barlow-condensed-extrabold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../assets/fonts/manrope-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Os estudos compartilham a composição; o módulo específico ajusta o título longo. -->
+    <link rel="stylesheet" href="../css/pages/case-study.css" />
+    <link rel="stylesheet" href="../css/pages/smart-waste.css" />
+    <script type="module" src="../js/main.js"></script>
+  </head>
+  <body class="case-page case-page--smart-waste" data-page="smart-waste">
+    <a class="skip-link" href="#conteudo"
+      ><span data-i18n="common.skipLink">Pular para o conteúdo</span></a
+    >
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="wordmark"
+          href="../index.html#inicio"
+          aria-label="K112p1 — voltar ao portfólio"
+          data-i18n-aria-label="common.wordmarkBack"
+          ><span class="wordmark-symbol" aria-hidden="true">◆</span>K112p1<span
+            class="wordmark-dot"
+            >.</span
+          ></a
+        >
+
+        <nav
+          class="main-nav"
+          id="main-nav"
+          aria-label="Navegação do estudo de caso"
+          data-i18n-aria-label="common.caseNavLabel"
+        >
+          <a href="#contexto"
+            ><span data-i18n="common.navContext">Contexto</span></a
+          ><a href="#processo"
+            ><span data-i18n="common.navProcess">Processo</span></a
+          ><a href="#produto"><span data-i18n="common.navPanel">Painel</span></a
+          ><a href="#tecnologia"
+            ><span data-i18n="common.navArchitecture">Arquitetura</span></a
+          ><a href="#aprendizados"
+            ><span data-i18n="common.navLessons">Aprendizados</span></a
+          ><a class="nav-contact" href="../index.html#contato"
+            ><span data-i18n="common.navContact">Vamos conversar</span>
+            <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+        <div class="header-actions">
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="Mudar idioma para inglês"
+            title="Mudar idioma para inglês"
+            hidden
+          >
+            EN
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="main-nav"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+        <span
+          class="sr-only"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          data-language-status
+        ></span>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <header class="case-hero container" id="inicio">
+        <a class="case-back" href="../index.html#projetos"
+          ><span aria-hidden="true">←</span>
+          <span data-i18n="common.backProjects">Voltar aos projetos</span></a
+        >
+        <p class="case-eyebrow" data-i18n="smartWaste.eyebrow">
+          Estudo de caso · Projeto Integrador · SPTech · 2026
+        </p>
+        <h1 class="case-title">
+          SMART WASTE<span data-i18n="smartWaste.tagline"
+            >Do sensor à decisão de coleta.</span
+          >
+        </h1>
+        <p class="case-intro" data-i18n="smartWaste.intro">
+          Um projeto acadêmico para acompanhar o preenchimento de recipientes
+          hospitalares e organizar a leitura desses dados em um painel. A
+          proposta combina sensores, software e visualização para apoiar
+          decisões sobre a coleta.
+        </p>
+        <dl class="case-facts">
+          <div>
+            <dt data-i18n="common.navContext">Contexto</dt>
+            <dd data-i18n="smartWaste.factContextValue">
+              Projeto Integrador · SPTech
+            </dd>
+          </div>
+          <div>
+            <dt data-i18n="smartWaste.factRole">Minha participação</dt>
+            <dd data-i18n="smartWaste.factRoleValue">
+              Dashboard, API e consultas SQL
+            </dd>
+          </div>
+          <div>
+            <dt data-i18n="smartWaste.factExploration">Exploração</dt>
+            <dd data-i18n="smartWaste.factExplorationValue">
+              Software, sensores e dados
+            </dd>
+          </div>
+        </dl>
+        <figure class="case-cover">
+          <img
+            src="../assets/images/projects/smart-waste-dashboard.png"
+            width="1897"
+            height="906"
+            fetchpriority="high"
+            alt="Dashboard do Smart Waste com indicadores de resíduos, gráfico de volume e lista de recipientes com estados de atenção."
+            data-i18n-alt="smartWaste.coverAlt"
+          />
+          <figcaption data-i18n="smartWaste.coverCaption">
+            Dashboard do projeto: os recipientes e suas leituras reunidos em uma
+            interface de acompanhamento.
+          </figcaption>
+        </figure>
+      </header>
+
+      <section
+        class="case-section container"
+        id="contexto"
+        aria-labelledby="contexto-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="contexto-title">
+            <span data-i18n="smartWaste.contextHeading"
+              >Acompanhar o volume.</span
+            ><br /><em data-i18n="smartWaste.contextHeadingEmphasis"
+              >Dar contexto à coleta.</em
+            >
+          </h2>
+        </div>
+        <div class="case-columns reveal">
+          <p class="case-lead" data-i18n="smartWaste.contextLead">
+            Como tornar visível o nível de preenchimento dos recipientes para
+            apoiar a decisão de solicitar a coleta?
+          </p>
+          <div>
+            <p data-i18n="smartWaste.contextProposal">
+              Essa é a questão que orienta o Smart Waste. A documentação do
+              Projeto Integrador, datada de março de 2026, apresenta uma solução
+              para acompanhar o volume de resíduos hospitalares e organizar as
+              informações para os responsáveis.
+            </p>
+            <p data-i18n="smartWaste.contextScope">
+              O recorte adotado foi o monitoramento. O tipo de resíduo é
+              informado manualmente; a medição do preenchimento não identifica o
+              material. A execução da coleta, o transporte e a integração com
+              empresas de destinação ficaram fora do escopo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-section container"
+        id="processo"
+        aria-labelledby="processo-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="processo-title">
+            <span data-i18n="smartWaste.processHeading"
+              >Construir um caminho</span
+            ><br /><em data-i18n="smartWaste.processHeadingEmphasis"
+              >entre leitura e informação.</em
+            >
+          </h2>
+        </div>
+        <ol class="case-process">
+          <li class="reveal">
+            <h3 data-i18n="smartWaste.processScopeTitle">Delimitar o escopo</h3>
+            <p data-i18n="smartWaste.processScopeBody">
+              O planejamento reuniu requisitos, organização do ambiente,
+              versionamento e definição da arquitetura. A escolha do que
+              acompanhar ajudou a separar as funções do sistema das atividades
+              operacionais de coleta.
+            </p>
+          </li>
+          <li class="reveal">
+            <h3 data-i18n="smartWaste.processComponentsTitle">
+              Conectar os componentes
+            </h3>
+            <p data-i18n="smartWaste.processComponentsBody">
+              A proposta aproxima Arduino e sensor ultrassônico da modelagem dos
+              dados e das interfaces web. A documentação organiza o
+              desenvolvimento em preparação, integração e revisão com testes.
+            </p>
+          </li>
+          <li class="reveal">
+            <h3 data-i18n="smartWaste.processFailuresTitle">Prever falhas</h3>
+            <p data-i18n="smartWaste.processFailuresBody">
+              Imprecisão das medições, problemas de conexão e inconsistência dos
+              registros aparecem como riscos do projeto. Esses pontos orientam o
+              que precisa ser observado nas validações da solução.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section
+        class="case-section container"
+        id="produto"
+        aria-labelledby="produto-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="produto-title">
+            <span data-i18n="smartWaste.productHeading">Leituras que podem</span
+            ><br /><em data-i18n="smartWaste.productHeadingEmphasis"
+              >ser acompanhadas.</em
+            >
+          </h2>
+          <p data-i18n="smartWaste.productIntro">
+            O painel organiza a consulta por recipiente, tipo de resíduo e
+            situação de alerta.
+          </p>
+        </div>
+        <div class="case-principles">
+          <article class="reveal">
+            <h3 data-i18n="smartWaste.productStatusTitle">
+              Consultar a situação
+            </h3>
+            <p data-i18n="smartWaste.productStatusBody">
+              Indicadores e uma relação de recipientes reúnem a situação
+              apresentada pelo sistema. Os filtros ajudam a concentrar a
+              consulta em um tipo de resíduo ou estado de atenção.
+            </p>
+          </article>
+          <article class="reveal">
+            <h3 data-i18n="smartWaste.productHistoryTitle">
+              Observar o histórico
+            </h3>
+            <p data-i18n="smartWaste.productHistoryBody">
+              O gráfico apresenta a evolução das leituras. A seleção de uma
+              lixeira permite acompanhar seus registros e observar como o
+              preenchimento varia.
+            </p>
+          </article>
+          <article class="reveal">
+            <h3 data-i18n="smartWaste.productAlertsTitle">
+              Acompanhar alertas
+            </h3>
+            <p data-i18n="smartWaste.productAlertsBody">
+              O código inclui rotinas de registro e contagem de alertas. O
+              painel combina essa informação com as faixas de atenção definidas
+              no protótipo.
+            </p>
+          </article>
+        </div>
+        <div class="case-gallery">
+          <figure class="case-screen reveal">
+            <img
+              src="../assets/images/projects/smart-waste/login.png"
+              width="1380"
+              height="713"
+              loading="lazy"
+              alt="Tela de login do Smart Waste com campos vazios para acesso ao sistema."
+              data-i18n-alt="smartWaste.loginAlt"
+            />
+            <figcaption data-i18n="smartWaste.loginCaption">
+              Login registrado na documentação do PI.
+            </figcaption>
+          </figure>
+          <figure class="case-screen reveal">
+            <img
+              src="../assets/images/projects/smart-waste/cadastro.png"
+              width="1380"
+              height="686"
+              loading="lazy"
+              alt="Tela de cadastro do Smart Waste com formulário de criação de conta e campos vazios."
+              data-i18n-alt="smartWaste.registrationAlt"
+            />
+            <figcaption data-i18n="smartWaste.registrationCaption">
+              Cadastro apresentado no mesmo documento acadêmico.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section
+        class="case-section container"
+        id="tecnologia"
+        aria-labelledby="tecnologia-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="tecnologia-title">
+            <span data-i18n="smartWaste.technologyHeading"
+              >Software, sensores</span
+            ><br /><em data-i18n="smartWaste.technologyHeadingEmphasis"
+              >e suas relações.</em
+            >
+          </h2>
+        </div>
+        <div class="case-columns reveal">
+          <div>
+            <p data-i18n="smartWaste.technologyStack">
+              A aplicação web utiliza Node.js e Express para organizar as rotas,
+              com acesso ao MySQL por meio do mysql2. A interface usa HTML, CSS
+              e JavaScript, enquanto o Chart.js apresenta as leituras
+              graficamente.
+            </p>
+            <p data-i18n="smartWaste.technologyRepository">
+              O repositório permite acompanhar a consulta de leituras, os
+              filtros, o histórico e o registro de alertas. A proposta de
+              aquisição das medições com Arduino e sensor ultrassônico aparece
+              nos materiais de arquitetura do projeto.
+            </p>
+          </div>
+          <div>
+            <p data-i18n="smartWaste.technologyContribution">
+              Minha contribuição se concentrou na evolução funcional do
+              dashboard: integração com a API e o MySQL, histórico por
+              recipiente, filtros, gráficos e rotinas de alertas. O painel
+              inicial e outros componentes foram construídos pela equipe.
+            </p>
+            <div class="case-stack">
+              <ul
+                class="tech-tags"
+                aria-label="Tecnologias do projeto Smart Waste"
+                data-i18n-aria-label="smartWaste.techLabel"
+              >
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>JavaScript</li>
+                <li data-i18n="smartWaste.htmlCss">HTML e CSS</li>
+                <li>MySQL</li>
+                <li>Chart.js</li>
+                <li>Arduino</li>
+                <li>IoT</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="case-contribution-block reveal">
+          <h3
+            class="case-contribution-title"
+            data-i18n="smartWaste.contributionsTitle"
+          >
+            Algumas das minhas contribuições
+          </h3>
+          <p data-i18n="smartWaste.contributionsIntro">
+            Os exemplos abaixo mostram parte das minhas contribuições. Também
+            atuei como revisor do código dos colegas da equipe durante o
+            desenvolvimento.
+          </p>
+          <ul class="case-contributions">
+            <li>
+              <h4 data-i18n="smartWaste.contributionIntegrationTitle">
+                Integração do painel
+              </h4>
+              <div>
+                <p data-i18n="smartWaste.contributionIntegrationBody">
+                  Conectei a interface do dashboard aos dados do MySQL por uma
+                  camada específica de rotas, controladores e modelos em
+                  Node.js/Express. No cliente, implementei requisições e a
+                  montagem dos cartões a partir das respostas da API, incluindo
+                  consultas gerais, de alerta e críticas.
+                </p>
+                <div class="case-evidence-links">
+                  <a
+                    class="text-link"
+                    href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo/commit/327a649d5790f46882a3ca5ec7a8bc13dc97022a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="smartWaste.evidenceIntegration"
+                      >Interface, rotas e consultas</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span
+                      class="sr-only"
+                      data-i18n="smartWaste.evidenceIntegrationContext"
+                    >
+                      — commit 327a649 (abre em nova aba)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4 data-i18n="smartWaste.contributionHistoryTitle">
+                Histórico por recipiente
+              </h4>
+              <div>
+                <p data-i18n="smartWaste.contributionHistoryBody">
+                  Trabalhei em views SQL que separam a leitura mais recente do
+                  histórico de cada lixeira. Também conectei a seleção do
+                  recipiente à preparação dos valores e horários apresentados no
+                  gráfico com Chart.js.
+                </p>
+                <div class="case-evidence-links">
+                  <a
+                    class="text-link"
+                    href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo/commit/cabdfc00db3ac999418b03ff3c34f139aa5fe1f5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="smartWaste.evidenceHistory"
+                      >Views de leitura e histórico</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span
+                      class="sr-only"
+                      data-i18n="smartWaste.evidenceHistoryContext"
+                    >
+                      — commit cabdfc0 (abre em nova aba)</span
+                    ></a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo/commit/e56108880255b4c259d367beec3d485d634721fc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="smartWaste.evidenceSelection"
+                      >Seleção da lixeira e gráfico</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span
+                      class="sr-only"
+                      data-i18n="smartWaste.evidenceSelectionContext"
+                    >
+                      — commit e561088 (abre em nova aba)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4 data-i18n="smartWaste.contributionFiltersTitle">
+                Filtros ligados aos dados
+              </h4>
+              <div>
+                <p data-i18n="smartWaste.contributionFiltersBody">
+                  Levei a seleção do tipo de resíduo da interface até a consulta
+                  usada pelo gráfico, acrescentando a rota, o controlador e o
+                  filtro SQL correspondentes. Assim, a seleção passou a
+                  determinar os registros apresentados.
+                </p>
+                <div class="case-evidence-links">
+                  <a
+                    class="text-link"
+                    href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo/commit/ed3bacccaf895afe1a58d2aeba065cbddfdb88ea"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="smartWaste.evidenceFilter"
+                      >Filtro do gráfico por tipo</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span
+                      class="sr-only"
+                      data-i18n="smartWaste.evidenceFilterContext"
+                    >
+                      — commit ed3bacc (abre em nova aba)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4 data-i18n="smartWaste.contributionAlertsTitle">
+                Alertas e indicadores
+              </h4>
+              <div>
+                <p data-i18n="smartWaste.contributionAlertsBody">
+                  Implementei rotinas de cadastro e contagem de alertas,
+                  relacionando as ocorrências às leituras e atualizando o
+                  indicador do painel. Também trabalhei nos contadores por tipo
+                  de resíduo e na apresentação dos estados definidos no
+                  protótipo.
+                </p>
+                <div class="case-evidence-links">
+                  <a
+                    class="text-link"
+                    href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo/commit/fd9282c8e99ee6132125e0af6a8e49ed4198850f"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="smartWaste.evidenceAlerts"
+                      >Registro e contagem de alertas</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span
+                      class="sr-only"
+                      data-i18n="smartWaste.evidenceAlertsContext"
+                    >
+                      — commit fd9282c (abre em nova aba)</span
+                    ></a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo/commit/4e91d24f5bc204a9835f9953087ca6704d325d8c"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="smartWaste.evidenceIndicators"
+                      >Indicadores do painel</span
+                    >
+                    <span aria-hidden="true">↗</span
+                    ><span
+                      class="sr-only"
+                      data-i18n="smartWaste.evidenceIndicatorsContext"
+                    >
+                      — commit 4e91d24 (abre em nova aba)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="case-gallery">
+          <figure class="project-preview reveal">
+            <img
+              src="../assets/images/projects/smart-waste-solution.png"
+              width="1052"
+              height="520"
+              loading="lazy"
+              alt="Diagrama da solução do Smart Waste conectando sensor, Arduino, recipientes, armazenamento, alertas e painel de gestão."
+              data-i18n-alt="smartWaste.solutionAlt"
+            />
+            <figcaption>
+              <button
+                class="project-preview-open"
+                type="button"
+                data-project-preview-open="smart-waste-solution-preview"
+                aria-controls="smart-waste-solution-preview"
+                aria-haspopup="dialog"
+                hidden
+              >
+                <span data-i18n="common.solutionDiagram"
+                  >Diagrama da solução</span
+                >
+                <span aria-hidden="true">↗</span>
+              </button>
+            </figcaption>
+          </figure>
+          <figure class="project-preview reveal">
+            <img
+              src="../assets/images/projects/smart-waste-technical.png"
+              width="1702"
+              height="947"
+              loading="lazy"
+              alt="Diagrama técnico do Smart Waste com coleta, Arduino, API, processamento, banco de dados, dashboard, alertas e equipe responsável."
+              data-i18n-alt="smartWaste.technicalAlt"
+            />
+            <figcaption>
+              <button
+                class="project-preview-open"
+                type="button"
+                data-project-preview-open="smart-waste-technical-preview"
+                aria-controls="smart-waste-technical-preview"
+                aria-haspopup="dialog"
+                hidden
+              >
+                <span data-i18n="common.technicalDiagram"
+                  >Diagrama técnico</span
+                >
+                <span aria-hidden="true">↗</span>
+              </button>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="case-actions reveal">
+          <a
+            class="text-link"
+            href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="common.viewImplementation"
+              >Ver implementação no GitHub</span
+            >
+            <span aria-hidden="true">↗</span
+            ><span class="sr-only" data-i18n="common.openNewTab"
+              >(abre em nova aba)</span
+            ></a
+          >
+        </div>
+      </section>
+
+      <section
+        class="case-section container"
+        id="aprendizados"
+        aria-labelledby="aprendizados-title"
+      >
+        <div class="case-section-heading reveal">
+          <h2 id="aprendizados-title">
+            <span data-i18n="smartWaste.lessonsHeading"
+              >A informação depende</span
+            ><br /><em data-i18n="smartWaste.lessonsHeadingEmphasis"
+              >do caminho até ela.</em
+            >
+          </h2>
+        </div>
+        <div class="case-columns reveal">
+          <p class="case-lead" data-i18n="smartWaste.lessonsLead">
+            A utilidade de um painel começa na origem da leitura e continua na
+            forma como ela é apresentada.
+          </p>
+          <div>
+            <p data-i18n="smartWaste.lessonsConnections">
+              O Smart Waste conecta decisões sobre medição, associação ao
+              recipiente, armazenamento e consulta. O trabalho também evidencia
+              a importância de definir o escopo e pensar no comportamento do
+              sistema quando uma leitura ou conexão falha.
+            </p>
+            <p data-i18n="smartWaste.lessonsNextSteps">
+              Como evolução, faz sentido documentar testes de integração física,
+              precisão das medições, atualização dos dados e comportamento dos
+              alertas. A documentação apresenta redução de custos e melhoria da
+              operação como objetivos; o estudo não atribui a esses objetivos
+              resultados medidos.
+            </p>
+          </div>
+        </div>
+        <p class="case-note reveal">
+          <span data-i18n="smartWaste.sourceIntro"
+            >Base deste estudo: documentação do Projeto Integrador Smart Waste,
+            SPTech, março de 2026, e</span
+          >
+          <a
+            href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="smartWaste.sourceRepository"
+              >repositório do projeto</span
+            ><span class="sr-only" data-i18n="common.openNewTab">
+              (abre em nova aba)</span
+            ></a
+          ><span data-i18n="smartWaste.sourceImages"
+            >. As telas de login e cadastro são registros do documento; a
+            captura do dashboard e os dois diagramas foram fornecidos
+            separadamente pelo autor.</span
+          >
+        </p>
+      </section>
+
+      <section class="case-next container" aria-labelledby="next-title">
+        <h2 id="next-title">
+          <span data-i18n="smartWaste.nextHeading">Outras formas</span><br /><em
+            data-i18n="smartWaste.nextHeadingEmphasis"
+            >de construir conexões.</em
+          >
+        </h2>
+        <p data-i18n="smartWaste.nextBody">
+          No INTEA, o desafio foi pensar em convivência e comunidade. Você
+          também pode explorar esse estudo ou conversar comigo sobre os
+          projetos.
+        </p>
+        <div class="case-actions">
+          <a class="button button-primary" href="intea.html"
+            ><span data-i18n="smartWaste.nextIntea">Conhecer o INTEA</span>
+            <span aria-hidden="true">↗</span></a
+          ><a class="text-link" href="../index.html#contato"
+            ><span data-i18n="common.contact">Entre em contato</span>
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+
+      <!-- Os diagramas reutilizam o visualizador acessível do portfólio. -->
+      <dialog
+        id="smart-waste-solution-preview"
+        class="project-preview-dialog"
+        aria-labelledby="smart-waste-solution-title"
+      >
+        <div class="project-preview-panel">
+          <div class="project-preview-header">
+            <h3
+              id="smart-waste-solution-title"
+              data-i18n="smartWaste.solutionDialogTitle"
+            >
+              Diagrama da solução · Smart Waste
+            </h3>
+            <button
+              class="project-preview-close"
+              type="button"
+              data-project-preview-close
+              aria-label="Fechar diagrama da solução"
+              autofocus
+              data-i18n-aria-label="smartWaste.closeSolution"
+            >
+              <span data-i18n="common.close">Fechar</span>
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <img
+            src="../assets/images/projects/smart-waste-solution.png"
+            width="1052"
+            height="520"
+            loading="lazy"
+            alt="Diagrama da solução do Smart Waste conectando sensor, Arduino, recipientes, armazenamento, alertas e painel de gestão."
+            data-i18n-alt="smartWaste.solutionAlt"
+          />
+        </div>
+      </dialog>
+      <dialog
+        id="smart-waste-technical-preview"
+        class="project-preview-dialog"
+        aria-labelledby="smart-waste-technical-title"
+      >
+        <div class="project-preview-panel">
+          <div class="project-preview-header">
+            <h3
+              id="smart-waste-technical-title"
+              data-i18n="smartWaste.technicalDialogTitle"
+            >
+              Diagrama técnico · Smart Waste
+            </h3>
+            <button
+              class="project-preview-close"
+              type="button"
+              data-project-preview-close
+              aria-label="Fechar diagrama técnico"
+              autofocus
+              data-i18n-aria-label="smartWaste.closeTechnical"
+            >
+              <span data-i18n="common.close">Fechar</span>
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <img
+            src="../assets/images/projects/smart-waste-technical.png"
+            width="1702"
+            height="947"
+            loading="lazy"
+            alt="Diagrama técnico do Smart Waste com coleta, Arduino, API, processamento, banco de dados, dashboard, alertas e equipe responsável."
+            data-i18n-alt="smartWaste.technicalAlt"
+          />
+        </div>
+      </dialog>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Matheus Maceu</p>
+        <nav
+          class="footer-social"
+          aria-label="Redes sociais"
+          data-i18n-aria-label="common.socialLabel"
+        >
+          <a
+            href="https://github.com/MatheusMaceu"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub<span class="sr-only" data-i18n="common.openNewTab">
+              (abre em nova aba)</span
+            ></a
+          ><a
+            href="https://www.linkedin.com/in/matheus-maceu-ferreira-da-silva-616235340/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn<span class="sr-only" data-i18n="common.openNewTab">
+              (abre em nova aba)</span
+            ></a
+          >
+        </nav>
+        <a class="back-top" href="#inicio"
+          ><span data-i18n="common.backTop">Voltar ao topo</span>
+          <span aria-hidden="true">↑</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

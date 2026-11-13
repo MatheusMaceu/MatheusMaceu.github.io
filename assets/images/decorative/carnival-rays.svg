@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" fill="none">
+  <title>Raios de gravura do carnaval noturno</title>
+  <desc>Fundo decorativo original com raios vinho, círculos concêntricos e textura discreta.</desc>
+  <defs>
+    <radialGradient id="fade"><stop offset="0" stop-color="white"/><stop offset=".6" stop-color="white" stop-opacity=".75"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
+    <mask id="vignette"><rect width="900" height="900" fill="url(#fade)"/></mask>
+    <g id="ray"><path d="M450 450 432 0h36Z" fill="#a2373e" fill-opacity=".18"/></g>
+    <pattern id="engraving" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 6 6 0" stroke="#eee5d5" stroke-opacity=".035" stroke-width=".45"/></pattern>
+  </defs>
+  <g mask="url(#vignette)">
+    <rect width="900" height="900" fill="#10100f"/>
+    <g>
+      <use href="#ray"/><use href="#ray" transform="rotate(11.25 450 450)"/><use href="#ray" transform="rotate(22.5 450 450)"/><use href="#ray" transform="rotate(33.75 450 450)"/>
+      <use href="#ray" transform="rotate(45 450 450)"/><use href="#ray" transform="rotate(56.25 450 450)"/><use href="#ray" transform="rotate(67.5 450 450)"/><use href="#ray" transform="rotate(78.75 450 450)"/>
+      <use href="#ray" transform="rotate(90 450 450)"/><use href="#ray" transform="rotate(101.25 450 450)"/><use href="#ray" transform="rotate(112.5 450 450)"/><use href="#ray" transform="rotate(123.75 450 450)"/>
+      <use href="#ray" transform="rotate(135 450 450)"/><use href="#ray" transform="rotate(146.25 450 450)"/><use href="#ray" transform="rotate(157.5 450 450)"/><use href="#ray" transform="rotate(168.75 450 450)"/>
+      <use href="#ray" transform="rotate(180 450 450)"/><use href="#ray" transform="rotate(191.25 450 450)"/><use href="#ray" transform="rotate(202.5 450 450)"/><use href="#ray" transform="rotate(213.75 450 450)"/>
+      <use href="#ray" transform="rotate(225 450 450)"/><use href="#ray" transform="rotate(236.25 450 450)"/><use href="#ray" transform="rotate(247.5 450 450)"/><use href="#ray" transform="rotate(258.75 450 450)"/>
+      <use href="#ray" transform="rotate(270 450 450)"/><use href="#ray" transform="rotate(281.25 450 450)"/><use href="#ray" transform="rotate(292.5 450 450)"/><use href="#ray" transform="rotate(303.75 450 450)"/>
+      <use href="#ray" transform="rotate(315 450 450)"/><use href="#ray" transform="rotate(326.25 450 450)"/><use href="#ray" transform="rotate(337.5 450 450)"/><use href="#ray" transform="rotate(348.75 450 450)"/>
+    </g>
+    <g stroke="#eee5d5" stroke-opacity=".1" stroke-width=".5"><circle cx="450" cy="450" r="110"/><circle cx="450" cy="450" r="190"/><circle cx="450" cy="450" r="270"/><circle cx="450" cy="450" r="350"/><circle cx="450" cy="450" r="430"/></g>
+    <g stroke="#a2373e" stroke-opacity=".24" stroke-width=".5"><path d="M450 15v870M15 450h870M142 142l616 616M142 758l616-616"/></g>
+    <rect width="900" height="900" fill="url(#engraving)"/>
+  </g>
+</svg>

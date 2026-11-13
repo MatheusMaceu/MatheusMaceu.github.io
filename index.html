@@ -1,1 +1,956 @@
-Inicio do projeto
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Endereço definitivo para publicar o PP2 na raiz do GitHub Pages. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121110" />
+    <link rel="canonical" href="https://matheusmaceu.github.io/" />
+    <meta
+      name="description"
+      data-i18n-content="home.metaDescription"
+      content="Portfólio de Matheus Maceu, desenvolvedor de software, estagiário na Stefanini e estudante na SPTech. Conheça meus projetos e minha trajetória."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://matheusmaceu.github.io/" />
+    <meta
+      property="og:locale"
+      content="pt_BR"
+      data-i18n-content="home.metaOgLocale"
+    />
+    <meta
+      property="og:title"
+      data-i18n-content="home.metaOgTitle"
+      content="Matheus Maceu — Desenvolvedor de Software"
+    />
+    <meta
+      property="og:description"
+      data-i18n-content="home.metaOgDescription"
+      content="Conheça os projetos e a trajetória de Matheus Maceu, também conhecido como K112p1."
+    />
+    <meta
+      property="og:image"
+      content="https://matheusmaceu.github.io/assets/images/social-cover.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      data-i18n-content="home.metaOgImageAlt"
+      content="Matheus Maceu — K112p1. Desenvolvimento de software."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title data-i18n="home.metaTitle">
+      Matheus Maceu · K112p1 — Desenvolvedor de Software
+    </title>
+    <!-- Fontes locais: antecipa somente os arquivos usados na primeira tela. -->
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/barlow-condensed-extrabold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/manrope-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#conteudo" data-i18n="common.skipLink"
+      >Pular para o conteúdo</a
+    >
+    <!-- Navegação fixa; o menu mobile e a seção ativa são controlados em js/navbar.js. -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="wordmark"
+          href="#inicio"
+          aria-label="K112p1 — início"
+          data-i18n-aria-label="common.wordmarkLabel"
+          ><span class="wordmark-symbol" aria-hidden="true">◆</span>K112p1<span
+            class="wordmark-dot"
+            >.</span
+          ></a
+        >
+
+        <nav
+          class="main-nav"
+          id="main-nav"
+          aria-label="Navegação principal"
+          data-i18n-aria-label="common.navLabel"
+        >
+          <a href="#sobre" data-i18n="common.navAbout">Sobre mim</a
+          ><a href="#projetos" data-i18n="common.navProjects">Projetos</a
+          ><a href="#tecnologias" data-i18n="common.navSkills">Tecnologias</a
+          ><a href="#experiencia" data-i18n="common.navExperience"
+            >Experiência</a
+          ><a href="#formacao" data-i18n="common.navEducation">Formação</a
+          ><a href="#contato" class="nav-contact"
+            ><span data-i18n="common.navContact">Vamos conversar</span>
+            <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+        <div class="header-actions">
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="Mudar idioma para inglês"
+            title="Mudar idioma para inglês"
+            hidden
+          >
+            EN
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="main-nav"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+        <span
+          class="sr-only"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          data-language-status
+        ></span>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- Apresentação: contato, currículo e retrato fornecido pelo autor. -->
+      <section class="hero container" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <h1 id="hero-title">
+              <span>MATHEUS</span
+              ><span class="surname"
+                >MACEU<span class="hero-title-star" aria-hidden="true"
+                  >✳</span
+                ></span
+              >
+            </h1>
+            <p class="hero-description">
+              <strong data-i18n="home.heroRole"
+                >Desenvolvedor de software.</strong
+              >
+              <span data-i18n="home.heroStudy"
+                >Atualmente, estudo Análise e Desenvolvimento de Sistemas
+                na</span
+              >
+              <strong>SPTech</strong>
+              <span data-i18n="home.heroInternship">e sou estagiário na</span>
+              <strong>Stefanini</strong>.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projetos"
+                ><span data-i18n="home.exploreProjects">Explorar projetos</span>
+                <span aria-hidden="true">↗</span></a
+              ><a
+                class="hero-github"
+                href="https://github.com/MatheusMaceu"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="assets/icons/sprite.svg#github"></use></svg
+                ><span data-i18n="home.myGithub">Meu GitHub</span>
+                <span aria-hidden="true">↗</span
+                ><span class="sr-only" data-i18n="common.openNewTab"
+                  >(abre em nova aba)</span
+                ></a
+              >
+            </div>
+            <div
+              class="hero-contact"
+              aria-label="Contato e currículo"
+              data-i18n-aria-label="home.heroContactLabel"
+            >
+              <a
+                class="hero-email"
+                href="mailto:matheusferreira.maceu@gmail.com"
+              >
+                <svg class="icon" aria-hidden="true">
+                  <use href="assets/icons/sprite.svg#mail"></use>
+                </svg>
+                <span>matheusferreira.maceu@gmail.com</span>
+              </a>
+              <a
+                class="hero-resume"
+                href="assets/documents/Matheus_Maceu_CV_com_foto.pdf"
+                data-cv-en-href="assets/documents/Matheus_Maceu_CV_EN.pdf"
+                download="Matheus_Maceu_CV_com_foto.pdf"
+                hreflang="pt-BR"
+                aria-label="Baixar currículo em PDF"
+                data-i18n-aria-label="home.downloadCvLabel"
+              >
+                <span data-i18n="home.cvLabel">Currículo PDF</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+          <div class="portrait-poster">
+            <!-- Ornamentos visuais ficam fora da leitura de tecnologias assistivas. -->
+            <img
+              class="portrait-rays"
+              src="assets/images/decorative/carnival-rays.svg"
+              alt=""
+              width="900"
+              height="900"
+              aria-hidden="true"
+            />
+            <figure class="poster-paper">
+              <div class="poster-photo">
+                <img
+                  src="assets/images/fotoCurriculo.jpeg"
+                  width="400"
+                  height="400"
+                  alt="Retrato de Matheus Maceu"
+                  data-i18n-alt="home.portraitAlt"
+                  fetchpriority="high"
+                />
+                <div class="photo-halftone" aria-hidden="true"></div>
+              </div>
+            </figure>
+            <img
+              class="portrait-seal"
+              src="assets/images/decorative/carnival-seal.svg"
+              alt=""
+              width="128"
+              height="128"
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre mim: os marcos da trajetória levam aos detalhes mais abaixo. -->
+      <section class="about section" id="sobre" aria-labelledby="about-title">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-heading reveal">
+              <h2 id="about-title">
+                <span data-i18n="home.aboutTitle">SOBRE</span><br /><em
+                  data-i18n="home.aboutSubtitle"
+                  >mim.</em
+                >
+              </h2>
+              <ol
+                class="about-journey"
+                aria-label="Minha trajetória"
+                data-i18n-aria-label="home.journeyLabel"
+              >
+                <li>
+                  <a href="#formacao">
+                    <span class="journey-mark" aria-hidden="true">
+                      <svg class="icon">
+                        <use href="assets/icons/sprite.svg#code"></use>
+                      </svg>
+                    </span>
+                    <span class="journey-name">ETEC de Guaianazes</span>
+                    <span class="journey-detail" data-i18n="home.journeyEtec"
+                      >Desenvolvimento de Sistemas</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#formacao">
+                    <span class="journey-mark" aria-hidden="true">
+                      <svg class="icon">
+                        <use href="assets/icons/sprite.svg#chip"></use>
+                      </svg>
+                    </span>
+                    <span class="journey-name">SPTech</span>
+                    <span class="journey-detail" data-i18n="home.journeySptech"
+                      >Análise e Desenvolvimento de Sistemas</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#experiencia">
+                    <span class="journey-mark" aria-hidden="true">
+                      <svg class="icon">
+                        <use href="assets/icons/sprite.svg#terminal"></use>
+                      </svg>
+                    </span>
+                    <span class="journey-name">Stefanini</span>
+                    <span
+                      class="journey-detail"
+                      data-i18n="home.journeyStefanini"
+                      >Estágio em tecnologia</span
+                    >
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="about-copy reveal">
+              <p class="lead">
+                <span data-i18n="home.aboutIntro"
+                  >Sou Matheus, mas também pode me chamar de</span
+                >
+                <strong>K112p1</strong>.
+              </p>
+              <p data-i18n="home.aboutStudies">
+                Comecei a programar na ETEC de Guaianazes, onde participei do
+                INTEA como TCC. Hoje curso Análise e Desenvolvimento de Sistemas
+                na SPTech e sigo aprendendo com projetos de software e hardware.
+              </p>
+              <p data-i18n="home.aboutInternship">
+                No estágio na Stefanini, tenho contato com o dia a dia de uma
+                equipe de tecnologia e com a aplicação prática do que venho
+                estudando.
+              </p>
+              <p data-i18n="home.aboutNeurodivergence">
+                Sou autista e tenho TDAH. Isso faz parte de quem sou e de como
+                vivo o aprendizado.
+              </p>
+              <p data-i18n="home.aboutMusic">
+                Fora da tecnologia, gosto de música e sou fã de Insane Clown
+                Posse.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projetos em equipe com registros reais e acesso ao contexto e ao código. -->
+      <section
+        class="projects section container"
+        id="projetos"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-heading reveal">
+          <h2 id="projects-title">
+            <span data-i18n="home.projectsTitle">PROJETOS</span><br /><em
+              data-i18n="home.projectsSubtitle"
+              >em equipe.</em
+            >
+          </h2>
+          <p data-i18n="home.projectsIntro">
+            Dois projetos de que participei durante minha formação.
+          </p>
+        </div>
+        <!-- INTEA — trabalho de conclusão da formação técnica. -->
+        <article
+          class="project project-intea reveal"
+          aria-labelledby="intea-title"
+        >
+          <div class="project-heading">
+            <div>
+              <h3 id="intea-title">INTEA<span>.</span></h3>
+            </div>
+            <span class="project-discipline" data-i18n="home.inteaDiscipline"
+              >Web e comunidade</span
+            >
+          </div>
+          <div class="project-body">
+            <figure class="project-preview">
+              <img
+                src="assets/images/projects/intea/landing.jpg"
+                width="1280"
+                height="622"
+                loading="lazy"
+                alt="Tela inicial do INTEA com apresentação da comunidade e acesso à plataforma, registrada no TCC."
+                data-i18n-alt="home.inteaPreviewAlt"
+              />
+              <figcaption>
+                <a class="project-preview-open" href="projetos/intea.html"
+                  ><span data-i18n="common.viewCase"
+                    >Conhecer o estudo de caso</span
+                  >
+                  <span aria-hidden="true">↗</span></a
+                >
+              </figcaption>
+            </figure>
+            <div class="project-copy">
+              <p class="project-lead" data-i18n="home.inteaLead">
+                Uma rede social para a comunidade autista.
+              </p>
+              <p data-i18n="home.inteaDescription">
+                Desenvolvemos o INTEA em equipe como TCC na ETEC de Guaianazes.
+                A proposta é aproximar autistas, responsáveis e outras pessoas
+                da comunidade.
+              </p>
+              <p
+                class="project-contribution"
+                data-i18n="home.inteaContribution"
+              >
+                Entre minhas contribuições estão configurações, preferências
+                visuais, responsividade e ajustes de cadastro com Laravel.
+                Também revisei código de colegas da equipe.
+              </p>
+              <ul class="project-features">
+                <li data-i18n="home.inteaFeatureProfiles">
+                  Perfis personalizados e comunidades
+                </li>
+                <li data-i18n="home.inteaFeatureFeed">
+                  Feed, curtidas e respostas
+                </li>
+                <li data-i18n="home.inteaFeatureChat">
+                  Chat e recursos de denúncia
+                </li>
+              </ul>
+              <ul
+                class="tech-tags"
+                aria-label="Tecnologias do INTEA"
+                data-i18n-aria-label="home.inteaTechnologies"
+              >
+                <li>PHP</li>
+                <li>Laravel</li>
+                <li>JavaScript</li>
+                <li>Blade</li>
+                <li>MySQL</li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://github.com/EspectrumOrg/intea-site"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span data-i18n="common.viewCode">Ver código no GitHub</span>
+                <span aria-hidden="true">↗</span
+                ><span class="sr-only" data-i18n="home.inteaCodeNewTab"
+                  >do INTEA (abre em nova aba)</span
+                ></a
+              >
+            </div>
+          </div>
+        </article>
+        <!-- Smart Waste — projeto de software e hardware na SPTech. -->
+        <article
+          class="project project-waste reveal"
+          aria-labelledby="waste-title"
+        >
+          <div class="project-heading">
+            <div>
+              <h3 id="waste-title">SMART WASTE<span>.</span></h3>
+            </div>
+            <span class="project-discipline" data-i18n="home.wasteDiscipline"
+              >Software e IoT</span
+            >
+          </div>
+          <div class="project-body">
+            <figure class="project-preview">
+              <img
+                src="assets/images/projects/smart-waste-dashboard.png"
+                width="1897"
+                height="906"
+                loading="lazy"
+                alt="Dashboard do Smart Waste System com gráfico de volume das lixeiras, indicadores de resíduos e alertas."
+                data-i18n-alt="home.wasteDashboardAlt"
+              />
+              <figcaption>
+                <button
+                  class="project-preview-open"
+                  type="button"
+                  data-project-preview-open="smart-waste-preview"
+                  aria-controls="smart-waste-preview"
+                  aria-haspopup="dialog"
+                  hidden
+                >
+                  <span data-i18n="home.viewDashboard">Ver dashboard</span>
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" />
+                  </svg>
+                </button>
+                <div class="project-preview-diagrams">
+                  <button
+                    class="project-preview-open project-preview-open--diagram"
+                    type="button"
+                    data-project-preview-open="smart-waste-solution-preview"
+                    aria-controls="smart-waste-solution-preview"
+                    aria-haspopup="dialog"
+                    hidden
+                  >
+                    <span data-i18n="common.solutionDiagram"
+                      >Diagrama da solução</span
+                    >
+                    <span aria-hidden="true">↗</span>
+                  </button>
+                  <button
+                    class="project-preview-open project-preview-open--diagram"
+                    type="button"
+                    data-project-preview-open="smart-waste-technical-preview"
+                    aria-controls="smart-waste-technical-preview"
+                    aria-haspopup="dialog"
+                    hidden
+                  >
+                    <span data-i18n="common.technicalDiagram"
+                      >Diagrama técnico</span
+                    >
+                    <span aria-hidden="true">↗</span>
+                  </button>
+                </div>
+              </figcaption>
+            </figure>
+            <div class="project-copy">
+              <p class="project-lead" data-i18n="home.wasteLead">
+                Monitoramento de resíduos hospitalares.
+              </p>
+              <p data-i18n="home.wasteDescription">
+                Na SPTech, participei deste projeto em equipe para explorar a
+                integração entre software, sensores e visualização de dados.
+              </p>
+              <p
+                class="project-contribution"
+                data-i18n="home.wasteContribution"
+              >
+                Entre minhas contribuições estão a integração do dashboard com a
+                API e o MySQL, os filtros, o histórico e as rotinas de alertas.
+                Também revisei código de colegas da equipe.
+              </p>
+              <ul
+                class="tech-tags"
+                aria-label="Tecnologias do Smart Waste System"
+                data-i18n-aria-label="home.wasteTechnologies"
+              >
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>JavaScript</li>
+                <li>MySQL</li>
+                <li>Arduino</li>
+                <li>IoT</li>
+              </ul>
+              <a class="text-link" href="projetos/smart-waste.html"
+                ><span data-i18n="common.viewCase"
+                  >Conhecer o estudo de caso</span
+                >
+                <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="text-link"
+                href="https://github.com/Smart-Waste-Monitor/Back-End-Grupo"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span data-i18n="common.viewCode">Ver código no GitHub</span>
+                <span aria-hidden="true">↗</span
+                ><span class="sr-only" data-i18n="home.wasteCodeNewTab"
+                  >do Smart Waste System (abre em nova aba)</span
+                ></a
+              >
+            </div>
+          </div>
+        </article>
+        <div class="projects-end reveal">
+          <a
+            class="text-link"
+            href="https://github.com/MatheusMaceu?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="home.moreProjects">Mais projetos no GitHub</span>
+            <span aria-hidden="true">↗</span
+            ><span class="sr-only" data-i18n="common.openNewTab"
+              >(abre em nova aba)</span
+            ></a
+          >
+        </div>
+      </section>
+
+      <!-- Tecnologias organizadas por área, sem níveis de domínio presumidos. -->
+      <section
+        class="skills section"
+        id="tecnologias"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <div class="skills-heading reveal">
+            <h2 id="skills-title">
+              <span data-i18n="home.skillsTitle">TECNOLOGIAS</span><br /><em
+                data-i18n="home.skillsSubtitle"
+                >e ferramentas.</em
+              >
+            </h2>
+            <p data-i18n="home.skillsIntro">
+              Ferramentas que conheci nos estudos e nos projetos.
+            </p>
+          </div>
+          <div class="skills-list">
+            <div class="skill-row reveal">
+              <h3>
+                <svg class="icon" aria-hidden="true">
+                  <use href="assets/icons/sprite.svg#code"></use></svg
+                >FRONT-END
+              </h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>
+                <svg class="icon" aria-hidden="true">
+                  <use href="assets/icons/sprite.svg#terminal"></use></svg
+                >BACK-END
+              </h3>
+              <ul>
+                <li>PHP</li>
+                <li>Laravel</li>
+                <li>Node.js</li>
+                <li>Java</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>
+                <svg class="icon" aria-hidden="true">
+                  <use href="assets/icons/sprite.svg#database"></use></svg
+                ><span data-i18n="home.skillsDatabase">BANCO DE DADOS</span>
+              </h3>
+              <ul>
+                <li>SQL</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>
+                <svg class="icon" aria-hidden="true">
+                  <use href="assets/icons/sprite.svg#chip"></use></svg
+                >HARDWARE &amp; IOT
+              </h3>
+              <ul>
+                <li>Arduino</li>
+                <li data-i18n="home.internetOfThings">Internet das Coisas</li>
+              </ul>
+            </div>
+            <div class="skill-row reveal">
+              <h3>
+                <svg class="icon" aria-hidden="true">
+                  <use href="assets/icons/sprite.svg#branch"></use></svg
+                ><span data-i18n="home.skillsTools">FERRAMENTAS</span>
+              </h3>
+              <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiência profissional: empresa, cargo e período confirmados. -->
+      <section
+        class="experience section container"
+        id="experiencia"
+        aria-labelledby="experience-title"
+      >
+        <div class="experience-layout">
+          <div class="experience-heading reveal">
+            <h2 id="experience-title">
+              <span data-i18n="home.experienceTitle">EXPERIÊNCIA</span><br /><em
+                data-i18n="home.experienceSubtitle"
+                >profissional.</em
+              >
+            </h2>
+          </div>
+          <article class="experience-ticket reveal">
+            <h3>STEFANINI</h3>
+            <p class="ticket-role" data-i18n="home.experienceRole">
+              Estagiário de TI / Desenvolvimento de Software
+            </p>
+            <span class="ticket-period"
+              ><time datetime="2026-07" data-i18n="home.experienceStart"
+                >Julho de 2026</time
+              >
+              <span data-i18n="home.experiencePresent">— atual</span></span
+            >
+            <div class="ticket-rule" aria-hidden="true"></div>
+            <p
+              class="ticket-description"
+              data-i18n="home.experienceDescription"
+            >
+              O estágio é meu contato com a rotina de uma equipe de tecnologia e
+              uma oportunidade de aplicar o que venho estudando.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Formação apresentada em ordem cronológica. -->
+      <section
+        class="education section container"
+        id="formacao"
+        aria-labelledby="education-title"
+      >
+        <div class="education-layout">
+          <div class="reveal">
+            <h2 id="education-title">
+              <span data-i18n="home.educationTitle">FORMAÇÃO</span><br /><em
+                data-i18n="home.educationSubtitle"
+                >acadêmica.</em
+              >
+            </h2>
+          </div>
+          <ol class="education-timeline">
+            <li class="education-entry reveal">
+              <div>
+                <h3>ETEC DE GUAIANAZES</h3>
+                <p class="education-course">
+                  <span data-i18n="home.educationEtecCourse"
+                    >Ensino Médio integrado ao Técnico em Desenvolvimento de
+                    Sistemas.</span
+                  ><br /><span data-i18n="home.educationEtecCompletion"
+                    >Concluído em 2025.</span
+                  >
+                </p>
+                <p data-i18n="home.educationEtecDescription">
+                  Foi nessa formação que participei do INTEA como TCC.
+                </p>
+              </div>
+            </li>
+            <li class="education-entry reveal">
+              <div>
+                <h3>SPTECH</h3>
+                <p class="education-course">
+                  São Paulo Tech School.<br /><span
+                    data-i18n="home.educationSptechCourse"
+                    >Tecnólogo em Análise e Desenvolvimento de Sistemas.</span
+                  ><br /><span data-i18n="home.educationSptechCompletion"
+                    >Conclusão prevista para 2028.</span
+                  >
+                </p>
+                <p data-i18n="home.educationSptechDescription">
+                  Projetos como o Smart Waste System aproximam o estudo de
+                  software e hardware.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Contato: mantenha os links de currículo sincronizados com os da apresentação. -->
+      <section
+        class="contact section"
+        id="contato"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <div class="contact-layout">
+            <div class="contact-heading reveal">
+              <h2 id="contact-title">
+                <span data-i18n="home.contactTitle">VAMOS</span><br /><em
+                  data-i18n="home.contactSubtitle"
+                  >conversar?</em
+                >
+              </h2>
+              <p data-i18n="home.contactIntro">
+                Pode me chamar para falar de projetos, trabalho ou trocar uma
+                ideia.
+              </p>
+            </div>
+            <div class="contact-ticket reveal">
+              <div class="contact-links">
+                <a
+                  href="https://github.com/MatheusMaceu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#github"></use></svg
+                  ><span>GitHub</span><span aria-hidden="true">↗</span
+                  ><span class="sr-only" data-i18n="common.openNewTab"
+                    >(abre em nova aba)</span
+                  ></a
+                ><a
+                  href="https://www.linkedin.com/in/matheus-maceu-ferreira-da-silva-616235340/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#linkedin"></use></svg
+                  ><span>LinkedIn</span><span aria-hidden="true">↗</span
+                  ><span class="sr-only" data-i18n="common.openNewTab"
+                    >(abre em nova aba)</span
+                  ></a
+                >
+                <a
+                  href="mailto:matheusferreira.maceu@gmail.com"
+                  aria-label="Enviar e-mail para matheusferreira.maceu@gmail.com"
+                  data-i18n-aria-label="home.emailLabel"
+                >
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#mail"></use></svg
+                  ><span class="contact-link-text"
+                    ><span data-i18n="home.emailText">E-mail</span
+                    ><small class="contact-address"
+                      >matheusferreira.maceu@gmail.com</small
+                    ></span
+                  >
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  href="assets/documents/Matheus_Maceu_CV_com_foto.pdf"
+                  data-cv-en-href="assets/documents/Matheus_Maceu_CV_EN.pdf"
+                  download="Matheus_Maceu_CV_com_foto.pdf"
+                  hreflang="pt-BR"
+                  aria-label="Baixar currículo em PDF"
+                  data-i18n-aria-label="home.downloadCvLabel"
+                >
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#file"></use></svg
+                  ><span data-i18n="home.cvLabel">Currículo (PDF)</span>
+                  <span aria-hidden="true">↓</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Os materiais abrem na própria página; fechamento e foco ficam em project-preview.js. -->
+      <dialog
+        id="smart-waste-preview"
+        class="project-preview-dialog"
+        aria-labelledby="smart-waste-preview-title"
+      >
+        <div class="project-preview-panel">
+          <div class="project-preview-header">
+            <h3
+              id="smart-waste-preview-title"
+              data-i18n="home.wasteDashboardTitle"
+            >
+              Dashboard do Smart Waste
+            </h3>
+            <button
+              class="project-preview-close"
+              type="button"
+              data-project-preview-close
+              aria-label="Fechar visualização"
+              data-i18n-aria-label="common.closePreview"
+              autofocus
+            >
+              <span data-i18n="common.close">Fechar</span>
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <img
+            src="assets/images/projects/smart-waste-dashboard.png"
+            width="1897"
+            height="906"
+            loading="lazy"
+            alt="Dashboard do Smart Waste System com gráfico de volume das lixeiras, indicadores de resíduos e alertas."
+            data-i18n-alt="home.wasteDashboardAlt"
+          />
+        </div>
+      </dialog>
+      <dialog
+        id="smart-waste-solution-preview"
+        class="project-preview-dialog"
+        aria-labelledby="smart-waste-solution-title"
+      >
+        <div class="project-preview-panel">
+          <div class="project-preview-header">
+            <h3
+              id="smart-waste-solution-title"
+              data-i18n="home.wasteSolutionTitle"
+            >
+              Diagrama da solução · Smart Waste
+            </h3>
+            <button
+              class="project-preview-close"
+              type="button"
+              data-project-preview-close
+              aria-label="Fechar diagrama da solução"
+              data-i18n-aria-label="home.closeSolutionLabel"
+              autofocus
+            >
+              <span data-i18n="common.close">Fechar</span>
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <img
+            src="assets/images/projects/smart-waste-solution.png"
+            width="1052"
+            height="520"
+            loading="lazy"
+            alt="Diagrama da solução do Smart Waste com sensor ultrassônico, Arduino, lixeiras hospitalares, armazenamento de dados, alertas e painel de gestão."
+            data-i18n-alt="home.wasteSolutionAlt"
+          />
+        </div>
+      </dialog>
+      <dialog
+        id="smart-waste-technical-preview"
+        class="project-preview-dialog"
+        aria-labelledby="smart-waste-technical-title"
+      >
+        <div class="project-preview-panel">
+          <div class="project-preview-header">
+            <h3
+              id="smart-waste-technical-title"
+              data-i18n="home.wasteTechnicalTitle"
+            >
+              Diagrama técnico · Smart Waste
+            </h3>
+            <button
+              class="project-preview-close"
+              type="button"
+              data-project-preview-close
+              aria-label="Fechar diagrama técnico"
+              data-i18n-aria-label="home.closeTechnicalLabel"
+              autofocus
+            >
+              <span data-i18n="common.close">Fechar</span>
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <img
+            src="assets/images/projects/smart-waste-technical.png"
+            width="1702"
+            height="947"
+            loading="lazy"
+            alt="Diagrama técnico do Smart Waste em oito etapas: coleta com sensor HC-SR04, Arduino, API, processamento, banco de dados, dashboard, alertas e equipe responsável."
+            data-i18n-alt="home.wasteTechnicalAlt"
+          />
+        </div>
+      </dialog>
+    </main>
+    <!-- O ano é atualizado por js/main.js; o valor no HTML funciona sem JavaScript. -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Matheus Maceu</p>
+        <nav
+          class="footer-social"
+          aria-label="Redes sociais"
+          data-i18n-aria-label="common.socialLabel"
+        >
+          <a
+            href="https://github.com/MatheusMaceu"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub
+            <span class="sr-only" data-i18n="common.openNewTab"
+              >(abre em nova aba)</span
+            ></a
+          >
+          <a
+            href="https://www.linkedin.com/in/matheus-maceu-ferreira-da-silva-616235340/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn
+            <span class="sr-only" data-i18n="common.openNewTab"
+              >(abre em nova aba)</span
+            ></a
+          >
+        </nav>
+        <a class="back-top" href="#inicio"
+          ><span data-i18n="common.backTop">Voltar ao topo</span>
+          <span aria-hidden="true">↑</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

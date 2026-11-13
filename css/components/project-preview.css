@@ -1,0 +1,193 @@
+/* A captura é uma prévia estática. A ação de visualizar fica em um botão
+   próprio, separado do link externo para o código do projeto. */
+.project-preview {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #8c7667;
+  background: var(--color-paper);
+  box-shadow:
+    7px 7px 0 var(--color-bg),
+    8px 8px 0 #74604f85;
+}
+.project-preview > img {
+  width: 100%;
+  height: auto;
+}
+.project-preview-open {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  min-height: 52px;
+  padding: 15px 20px;
+  border-top: 1px solid #b6aa98;
+  color: var(--color-ink);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  transition:
+    color var(--transition),
+    background var(--transition);
+}
+.project-preview-open:hover {
+  color: #762b32;
+  background: #d9cbb7;
+}
+.project-preview-open:focus-visible {
+  outline-color: #87333b;
+  outline-offset: -6px;
+}
+.project-preview-open .icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Os diagramas são ações secundárias da mesma prévia, sem criar novos cards. */
+.project-preview-diagrams {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.project-preview-open--diagram {
+  gap: 12px;
+  padding: 13px 16px;
+  font-weight: 600;
+}
+.project-preview-open--diagram + .project-preview-open--diagram {
+  border-left: 1px solid #b6aa98;
+}
+.project-preview-open--diagram > span:first-child {
+  min-width: 0;
+}
+.project-preview-open--diagram > span:last-child {
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* O diálogo nativo mantém a visualização na própria página. Sua imagem
+   se ajusta à janela sem corte, filtro ou efeito de zoom. */
+body.project-preview-is-open {
+  overflow: hidden;
+}
+.project-preview-dialog:not([open]) {
+  display: none;
+}
+.project-preview-dialog {
+  width: min(1280px, calc(100% - 48px));
+  max-width: none;
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #8c7667;
+  background: var(--color-bg);
+  color: var(--color-text);
+  box-shadow: 0 24px 90px #0008;
+}
+.project-preview-dialog::backdrop {
+  background: #080706e8;
+}
+.project-preview-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: inherit;
+}
+.project-preview-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+.project-preview-header h3 {
+  min-width: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.project-preview-close {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 15px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #74604f;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition:
+    color var(--transition),
+    background var(--transition);
+}
+.project-preview-close:hover {
+  background: var(--color-wine);
+  color: #fff3e7;
+}
+.project-preview-close > span[aria-hidden] {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+}
+.project-preview-panel > img {
+  /* A imagem cede espaço ao cabeçalho quando títulos longos quebram linha. */
+  flex: 0 1 auto;
+  min-height: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #161412;
+}
+
+/* Em janelas baixas e com zoom alto, mantém o tamanho da imagem e permite
+   percorrê-la por rolagem, em vez de comprimi-la sob o cabeçalho. */
+@media (max-height: 400px) {
+  .project-preview-dialog {
+    overflow: auto;
+  }
+  .project-preview-panel {
+    max-height: none;
+  }
+  .project-preview-panel > img {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .project-preview {
+    box-shadow:
+      5px 5px 0 var(--color-bg),
+      6px 6px 0 #74604f85;
+  }
+  .project-preview-open {
+    padding: 14px 16px;
+  }
+  .project-preview-dialog {
+    width: calc(100% - 24px);
+    max-height: calc(100dvh - 24px);
+  }
+  .project-preview-header {
+    gap: 12px;
+    padding: 13px 14px;
+  }
+  .project-preview-header h3 {
+    font-size: 25px;
+  }
+  .project-preview-close {
+    gap: 8px;
+    padding-inline: 9px;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-preview-diagrams {
+    grid-template-columns: 1fr;
+  }
+  .project-preview-open--diagram + .project-preview-open--diagram {
+    border-left: 0;
+  }
+}

@@ -1,0 +1,17 @@
+# Código e documentação com a mesma quebra de linha em qualquer sistema.
+* text=auto
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+
+# Arquivos publicados que devem preservar seus bytes originais.
+*.pdf binary
+*.jpeg binary
+*.jpg binary
+*.png binary
+*.webp binary
+*.woff2 binary

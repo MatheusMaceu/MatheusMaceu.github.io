@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <title>Selo geométrico do carnaval noturno</title>
+  <desc>Ornamento original de anéis, dezesseis raios e um losango central. Sem símbolos de grupos musicais.</desc>
+  <defs>
+    <g id="ray"><path d="M120 35v23" stroke="#eee5d5" stroke-width=".7"/><path d="m120 28 2 4-2 4-2-4Z" fill="#a2373e"/></g>
+    <path id="star" d="m0-5 1.2 3.8L5 0 1.2 1.2 0 5-1.2 1.2-5 0l3.8-1.2Z" fill="#eee5d5"/>
+  </defs>
+  <circle cx="120" cy="120" r="112" stroke="#a2373e" stroke-width=".8"/>
+  <circle cx="120" cy="120" r="106" stroke="#eee5d5" stroke-opacity=".55" stroke-width=".5"/>
+  <circle cx="120" cy="120" r="99" stroke="#a2373e" stroke-width=".6" stroke-dasharray="1 4"/>
+  <circle cx="120" cy="120" r="63" stroke="#eee5d5" stroke-opacity=".5" stroke-width=".5"/>
+  <circle cx="120" cy="120" r="58" stroke="#a2373e" stroke-width=".5"/>
+  <g>
+    <use href="#ray"/><use href="#ray" transform="rotate(22.5 120 120)"/><use href="#ray" transform="rotate(45 120 120)"/><use href="#ray" transform="rotate(67.5 120 120)"/>
+    <use href="#ray" transform="rotate(90 120 120)"/><use href="#ray" transform="rotate(112.5 120 120)"/><use href="#ray" transform="rotate(135 120 120)"/><use href="#ray" transform="rotate(157.5 120 120)"/>
+    <use href="#ray" transform="rotate(180 120 120)"/><use href="#ray" transform="rotate(202.5 120 120)"/><use href="#ray" transform="rotate(225 120 120)"/><use href="#ray" transform="rotate(247.5 120 120)"/>
+    <use href="#ray" transform="rotate(270 120 120)"/><use href="#ray" transform="rotate(292.5 120 120)"/><use href="#ray" transform="rotate(315 120 120)"/><use href="#ray" transform="rotate(337.5 120 120)"/>
+  </g>
+  <path d="m120 73 28 47-28 47-28-47Z" fill="#a2373e" fill-opacity=".22" stroke="#eee5d5" stroke-width="1"/>
+  <path d="m120 88 18 32-18 32-18-32Z" stroke="#a2373e" stroke-width=".7"/>
+  <path d="m120 73v94m-28-47h56" stroke="#eee5d5" stroke-width=".5" stroke-opacity=".65"/>
+  <path d="m120 103 10 17-10 17-10-17Z" fill="#eee5d5"/>
+  <use href="#star" x="120" y="15"/><use href="#star" x="225" y="120"/><use href="#star" x="120" y="225"/><use href="#star" x="15" y="120"/>
+</svg>

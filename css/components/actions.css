@@ -1,0 +1,101 @@
+/* Botões e links de ação reutilizados nas seções. */
+
+.button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  padding: 17px 23px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.7;
+  transition:
+    color var(--transition),
+    background var(--transition);
+}
+.button-primary {
+  background: #b04449;
+  color: #fff3e7;
+  border: 1px solid #ce6d6e;
+}
+.button-primary::before,
+.button-primary::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--color-bg);
+  top: calc(50% - 3.5px);
+  border-radius: 50%;
+}
+.button-primary::before {
+  left: -4px;
+}
+.button-primary::after {
+  right: -4px;
+}
+.button-primary:hover {
+  background: #963b42;
+}
+.button > span[aria-hidden] {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform var(--transition);
+}
+.button:hover > span[aria-hidden] {
+  transform: translate(3px, -3px);
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding-block: 12px;
+  border-bottom: 1px solid #8c7667;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  transition:
+    color var(--transition),
+    border-color var(--transition);
+}
+.text-link > span[aria-hidden] {
+  font-size: 22px;
+  line-height: 1;
+  transition: transform var(--transition);
+}
+.text-link:hover {
+  color: var(--color-accent-light);
+  border-color: var(--color-accent-light);
+}
+.text-link:hover > span[aria-hidden] {
+  transform: translate(3px, -3px);
+}
+
+/* Responsividade do próprio módulo, do maior para o menor breakpoint. */
+@media (max-width: 850px) {
+  .button {
+    padding: 14px 18px;
+    font-size: 11px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .button {
+    font-size: 11px;
+    padding: 16px 20px;
+    gap: 23px;
+  }
+}
+
+@media (max-width: 359px) {
+  .button {
+    font-size: 11px;
+    gap: 20px;
+    padding-inline: 17px;
+  }
+}

@@ -1,0 +1,5 @@
+# Dependências e caches locais de desenvolvimento
+node_modules/
+
+# Planejamento pessoal, mantido somente na raiz local do projeto
+/IDEIAS.md

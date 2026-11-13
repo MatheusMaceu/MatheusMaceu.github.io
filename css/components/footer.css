@@ -1,0 +1,63 @@
+/* Rodapé, links sociais e retorno ao início. */
+
+.site-footer {
+  background: #0e0d0c;
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding-block: 32px;
+  color: #baa896;
+  font-size: 12px;
+}
+.footer-social {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+.footer-social a {
+  padding-block: 5px;
+  transition: color var(--transition);
+}
+.footer-social a:hover {
+  color: var(--color-accent-light);
+}
+.back-top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-block: 5px;
+  font-size: 11px;
+  color: #c6b7a3;
+}
+.back-top > span[aria-hidden] {
+  font-size: 23px;
+  line-height: 1;
+  color: var(--color-accent-light);
+  transition: transform var(--transition);
+}
+.back-top:hover > span[aria-hidden] {
+  transform: translateY(-4px);
+}
+
+/* Responsividade do próprio módulo, do maior para o menor breakpoint. */
+@media (max-width: 620px) {
+  .footer-inner {
+    gap: 16px 24px;
+    padding-block: 28px;
+  }
+  .footer-inner > p {
+    width: 100%;
+  }
+  .footer-social {
+    margin-right: auto;
+    gap: 20px;
+  }
+  .back-top {
+    font-size: 11px;
+    gap: 10px;
+  }
+}

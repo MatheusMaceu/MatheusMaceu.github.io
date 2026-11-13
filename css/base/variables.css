@@ -1,0 +1,51 @@
+/* Paleta, tipografia e medidas compartilhadas. Ajuste a identidade visual aqui. */
+
+:root {
+  color-scheme: dark;
+  --color-bg: #121110;
+  --color-paper: #e7dece;
+  --color-text: #eee5d5;
+  --color-muted: #b3aa9d;
+  --color-ink: #24201b;
+  --color-accent: #b94a4e;
+  --color-accent-light: #d77b78;
+  --color-wine: #762b32;
+  --color-border: #3d352f;
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Manrope", sans-serif;
+  --page-width: 1220px;
+  --page-gutter: clamp(24px, 5.5vw, 88px);
+  --header-height: 84px;
+  --section-space: clamp(84px, 9vw, 132px);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: 250ms var(--ease-out);
+}
+
+/* Responsividade do próprio módulo, do maior para o menor breakpoint. */
+@media (max-width: 1100px) {
+  :root {
+    --page-gutter: 42px;
+  }
+}
+
+@media (max-width: 850px) {
+  :root {
+    --header-height: 74px;
+    --page-gutter: 30px;
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    --page-gutter: 24px;
+    --header-height: 70px;
+    --section-space: 76px;
+  }
+}
+
+@media (max-width: 359px) {
+  :root {
+    --page-gutter: 20px;
+  }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>Matheus Maceu — portfólio pp2</title>
+  <desc>Capa editorial em preto, creme e vinho com nome, nickname e ocupação.</desc>
+  <defs>
+    <pattern id="grain" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 7 7 0" stroke="#eee5d5" stroke-width=".3" stroke-opacity=".04"/></pattern>
+    <g id="spoke"><path d="M920 354 908 116h24Z" fill="#a2373e" fill-opacity=".35"/></g>
+  </defs>
+  <rect width="1200" height="630" fill="#10100f"/>
+  <rect width="1200" height="630" fill="url(#grain)"/>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#eee5d5" stroke-opacity=".3"/>
+  <path d="M48 96h1104M48 536h1104" stroke="#eee5d5" stroke-opacity=".3"/>
+  <g fill="#eee5d5" font-family="Arial,sans-serif" font-size="14" letter-spacing="2"><text x="52" y="69">K112p1</text><text x="1148" y="69" text-anchor="end">PORTFÓLIO PESSOAL / PP2</text></g>
+  <g>
+    <use href="#spoke"/><use href="#spoke" transform="rotate(15 920 354)"/><use href="#spoke" transform="rotate(30 920 354)"/><use href="#spoke" transform="rotate(45 920 354)"/><use href="#spoke" transform="rotate(60 920 354)"/><use href="#spoke" transform="rotate(75 920 354)"/>
+    <use href="#spoke" transform="rotate(90 920 354)"/><use href="#spoke" transform="rotate(105 920 354)"/><use href="#spoke" transform="rotate(120 920 354)"/><use href="#spoke" transform="rotate(135 920 354)"/><use href="#spoke" transform="rotate(150 920 354)"/><use href="#spoke" transform="rotate(165 920 354)"/>
+    <use href="#spoke" transform="rotate(180 920 354)"/><use href="#spoke" transform="rotate(195 920 354)"/><use href="#spoke" transform="rotate(210 920 354)"/><use href="#spoke" transform="rotate(225 920 354)"/><use href="#spoke" transform="rotate(240 920 354)"/><use href="#spoke" transform="rotate(255 920 354)"/>
+    <use href="#spoke" transform="rotate(270 920 354)"/><use href="#spoke" transform="rotate(285 920 354)"/><use href="#spoke" transform="rotate(300 920 354)"/><use href="#spoke" transform="rotate(315 920 354)"/><use href="#spoke" transform="rotate(330 920 354)"/><use href="#spoke" transform="rotate(345 920 354)"/>
+  </g>
+  <g fill="none" stroke="#eee5d5" stroke-opacity=".3"><circle cx="920" cy="354" r="165"/><circle cx="920" cy="354" r="154"/><path d="m920 229 74 125-74 125-74-125Z"/><path d="m920 259 55 95-55 95-55-95Z" stroke="#a2373e"/><path d="M920 229v250m-74-125h148" stroke-width=".5"/></g>
+  <path d="m920 320 20 34-20 34-20-34Z" fill="#eee5d5"/>
+  <text x="50" y="272" fill="#eee5d5" font-family="Arial Narrow,Arial,sans-serif" font-size="146" font-weight="800" letter-spacing="-7" textLength="680" lengthAdjust="spacingAndGlyphs">MATHEUS</text>
+  <text x="48" y="424" fill="#bd5455" font-family="Georgia,serif" font-size="145" font-style="italic" letter-spacing="-8">Maceu.</text>
+  <text x="55" y="491" fill="#c4bbae" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">DESENVOLVIMENTO DE SOFTWARE</text>
+  <text x="52" y="574" fill="#a79b8e" font-family="Arial,sans-serif" font-size="11" letter-spacing="2">DARK CARNIVAL / EDITORIAL</text>
+  <text x="1148" y="574" text-anchor="end" fill="#c4bbae" font-family="Georgia,serif" font-size="20" font-style="italic">Código com identidade.</text>
+  <g fill="#a2373e"><path d="m24 17 7 7-7 7-7-7Zm1152 0 7 7-7 7-7-7ZM24 599l7 7-7 7-7-7Zm1152 0 7 7-7 7-7-7Z"/></g>
+</svg>

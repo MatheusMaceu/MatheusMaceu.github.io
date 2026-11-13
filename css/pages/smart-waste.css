@@ -1,0 +1,11 @@
+/* O nome mais longo usa uma escala própria; o restante da composição vem
+   de case-study.css. A quebra no espaço continua livre em telas estreitas. */
+.case-page--smart-waste .case-title {
+  font-size: clamp(72px, 10vw, 144px);
+}
+
+@media (max-width: 620px) {
+  .case-page--smart-waste .case-title {
+    font-size: clamp(56px, 14vw, 90px);
+  }
+}

@@ -1,0 +1,49 @@
+/* Movimento progressivo: o conteúdo permanece visível sem JavaScript. */
+
+@keyframes entrance {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-copy {
+  animation: entrance 800ms var(--ease-out) both;
+}
+.portrait-poster {
+  animation: entrance 950ms 120ms var(--ease-out) both;
+}
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 700ms var(--ease-out),
+    transform 700ms var(--ease-out);
+}
+.reveal.is-pending {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+/* A preferência do sistema remove movimento sem ocultar conteúdo. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal.is-pending {
+    opacity: 1;
+    transform: none;
+  }
+}
